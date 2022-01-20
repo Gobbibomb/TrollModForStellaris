@@ -1,0 +1,43 @@
+@cost1 = 5
+@cost2 = 10
+@cost3 = 15
+@cost4 = 20
+
+@power1 = -10
+@power2 = -15
+@power3 = -20
+@power4 = -30
+
+@ftl5 = 50
+@ftl6 = 80
+@ftl7 = 200
+@ftl8 = 240
+
+@power5 = -50
+@power6 = -60
+@power7 = 60
+@power8 = 100
+
+#Warp Drive 1
+utility_component_template = {
+	key = "MOD_WARP_DRIVE_3"
+	size = small
+	icon = "GFX_ship_part_warp_drive_3"
+	icon_frame = 1
+	power = @power1
+	resources = {
+		category = ship_components 		cost = { 
+			alloys = @cost1
+		}
+	}
+	ftl = no
+	jumpdrive = yes
+	ship_modifier = {
+		ship_ftl_jumpdrive_range_mult = -0.50
+	}
+	class_restriction = { shipclass_constructor shipclass_colonizer shipclass_science_ship}
+	component_set = "ftl_components"
+	ai_weight = {
+		weight = 10
+	}
+}
