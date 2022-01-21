@@ -1,2 +1,6 @@
 ﻿l_english:
  trade_policy_trade_league_desc:1 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§!, £unity£ §E0.25§!, £consumer_goods£ §L0.2§!, £society_research£ §G0.25§! and £alloys£ §B0.01§! "
+trade_policy_alloys_desc:1 "Prmettere il commercio di armi e tassarle è il miglio modo per aumentare i nostri equipaggiamenti militari £energy£ §Y0.5§! and £alloys£ §B0.1§!"
+trade_policy_trade_league_2_desc:1 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§!, £unity£ §E0.25§!, £consumer_goods£ §L0.2§!, £society_research£ §G0.25§! and £alloys£ §B0.01§! "
+
+ #trade_policy_alloy_desc:0 "Profits and taxes must take second place to improving alloy and militar equipement. We should focus our trade efforts towards the #manufacture and distribution military ship for civil.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.5§! and £alloys£ §Y0.1§!§!"

@@ -25,7 +25,6 @@ costruction = {
 
 	modifier = {
 		planet_building_build_speed_mult = 0.30
-		planet_districts_build_speed_mult = 0.30
 	}
 	prerequisites = {
 		tech_global_production_strategy

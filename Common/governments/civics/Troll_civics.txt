@@ -1,0 +1,42 @@
+@varnet05 = -0.5
+civic_big_architecture = {
+	#gfx/interface/icons/planet_modifiers/trait_robot_awoken.dds
+	modification = no		
+	icon = "gfx/interface/icons/governments/civics/civic_functional_architecture.dds"
+	potential = {
+		civics = {
+			NOR = {
+				value = civic_functional_architecture
+				#value = military_ship_order
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	description = "civic_big_architecture_tootip"
+	modifier = {
+		shipsize_corvette_build_speed_mult = @varnet05
+		shipsize_corvette_build_speed_mult = @varnet05
+		shipsize_destroyer_build_speed_mult = @varnet05
+		shipsize_cruiser_build_speed_mult = @varnet05
+		shipsize_battleship_build_speed_mult = @varnet05
+		shipsize_carrier_build_speed_mult = @varnet05
+		ship_corvette_cost_mult = +0.5
+		ship_destroyer_cost_mult = +0.5
+		ship_cruiser_cost_mult = +0.5
+		ship_battleship_cost_mult = +0.3
+		ship_carrier_cost_mult = +0.3
+		shipsize_carrier_cost_mult = +0.3
+		ship_fire_rate_mult = 0.33
+		ship_hull_mult = 0.75
+		ship_armor_mult = 1
+		ship_shield_mult = -0.1
+		ships_upkeep_mult  = 0.5
+		ship_speed_mult = -0.5
+		country_naval_cap_mult = -0.51
+		#ship_battleship_speed_mult = -0.30
+		#ship_cruiser_speed_mult = -0.50
+		#ship_destroyer_speed_mult = -0.60
+		#ship_corvette_speed_mult = -0.75
+		ship_evasion_mult = -0.2
+	}
+}
