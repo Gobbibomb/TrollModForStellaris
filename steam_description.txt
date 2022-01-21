@@ -1,0 +1,42 @@
+
+[quote=Gobbibomb]
+This mod is stable and playable but [b]currently under further development[/b].
+
+If you plan to host a big multi-session mp game using this mod, feel free to send me a [b]direct message[/b] or leave a [b]comment[/b] in order to be sure that any game breaking updates are not planned as long as you finish your game!
+[/quote]
+
+[hr][/hr]
+
+[h1][b]Overview[/b][/h1]
+This mod to offer a multiplayer different experience with focus production rare resource on systems requirement phi mod.
+
+[h1][b]How to install[/b][/h1]
+Requires 1 other mods in order to function normally. Those are:
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247841088] Phi mp balancing[/url]
+
+and in the launcher, the loading order should be (from top to bottom):
+[olist]
+[*]troll
+[*]phi mp balancing
+[/olist]
+
+[h1][b]The Changes to Vanilla[/b][/h1]
+[h2]Civilian and Resource[/h2]
+[list]
+[*]Civlian ship have ever jump.
+[*]Rare resource can't product with building refining with minerals 
+[*]More Rare resource on systems but cost energy use.
+[*]Special system with much resource but cost antimatter use
+[/list]
+[h2]Goverment trait and edicts[/h2]
+[list]
+[*]Big ships civic: have powerfull ships but is slow and low evasion.
+[*]Commercial league now more give 0.01 alloy for trade
+[*]Traits agrarian,venerable and during modified
+[*]Add trait Genius
+[*]Edict for more build speed building
+[*]Edict for low cost colony and more development colony speed.
+[*]Edict for trade value boost
+[*]Edict for more growth speed
+[/list]
