@@ -1,0 +1,134 @@
+##########################################################################
+# Empire edicts
+##########################################################################
+
+@Edict1Cost = 100
+@Edict2Cost = 200
+@Edict3Cost = 300
+
+@EdictPerpetual = -1
+
+#################
+# Toggle Edicts
+#################
+costruction = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict2Cost 
+		}
+	}
+
+	modifier = {
+		planet_building_build_speed_mult = 0.30
+	}
+	prerequisites = {
+		tech_global_production_strategy
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+colonization_boost_troll = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict1Cost 
+		}
+	}
+
+	modifier = {
+		ship_colonizer_cost_mult = -0.35
+		planet_colony_development_speed_mult = 0.25
+	}
+	potential = {
+		OR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+	prerequisites = {
+		tech_cryostasis_1
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+free_healt_care = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = free_healt_care }
+			}
+			influence = 300
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = free_healt_care 
+			}
+			influence = 150
+		}
+	}
+
+	modifier = {
+		pop_growth_speed = 0.10
+		planet_pops_consumer_goods_upkeep_mult = 1
+	}
+
+	potential = {
+		is_gestalt = no
+	}
+
+	prerequisites = {
+		"tech_gene_crops"
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+trade_value_boost = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { 
+			influence = 200
+		}
+	}
+
+	modifier = {
+		trade_value_mult = 0.25
+		planet_pops_consumer_goods_upkeep_mult = 0.5
+	}
+
+	potential = {
+		is_gestalt = no
+		
+	}
+
+	prerequisites = {
+		"tech_space_trading"
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}

@@ -1,0 +1,65 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# blocked_modifier - applied to planet only when deposit blocker has been cleared
+# constant_modifier - applied to planet always
+# blocker = <key/any/none> - default any
+# station = station class in orbit to gather
+
+#######################################
+######### STRATEGIC RESOURCES #########
+#######################################
+
+#########################
+### ADVANCED RESOURCES ##
+#########################
+
+d_troll_1 = {
+	station = shipclass_mining_station 
+	is_for_colonizeable = no
+	
+	resources = { 
+		category = orbital_mining_deposits
+		produces = {
+			sr_dark_matter = -1
+			alloys  = 25
+		}
+	}
+	
+	potential = {
+		 OR = {
+		 	is_planet_class = pc_gas_giant
+		 	is_planet_class = pc_toxic
+		 }	
+	}
+	
+	drop_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.5
+			is_inside_nebula = yes
+		}		
+	}
+}
+d_troll_2 = {
+	station = shipclass_mining_station 
+	is_for_colonizeable = no
+	
+	resources = { 
+		category = orbital_mining_deposits
+		produces = {
+			sr_dark_matter = -1
+			unity  = 100
+		}
+	}
+	
+	potential = {
+		 OR = {
+		 	is_planet_class = pc_infested_troll
+		 }	
+	}
+	
+	drop_weight = {
+		weight = 100
+	}
+}
