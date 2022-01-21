@@ -22,6 +22,7 @@ d_exotic_gases_1 = {
 		category = orbital_mining_deposits
 		produces = {
 			exotic_gases = 2
+			energy = -5
 		}
 	}
 
@@ -49,6 +50,7 @@ d_exotic_gases_2 = {
 		category = orbital_mining_deposits
 		produces = {
 			exotic_gases = 4
+			energy = -30
 		}
 	}
 
@@ -60,7 +62,7 @@ d_exotic_gases_2 = {
 	}
 
 	drop_weight = {
-		weight = 0.7
+		weight = 0.6
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
@@ -76,11 +78,12 @@ d_exotic_gases_3 = {
 		category = orbital_mining_deposits
 		produces = {
 			exotic_gases = 5
+			energy = -35
 		}
 	}
 
 	drop_weight = {
-		weight = 0.5
+		weight = 0.3
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
@@ -96,11 +99,12 @@ d_exotic_gases_4 = {
 		category = orbital_mining_deposits
 		produces = {
 			exotic_gases = 6
+			energy = -40
 		}
 	}
 
 	drop_weight = {
-		weight = 0.3
+		weight = 0.15
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
@@ -116,11 +120,12 @@ d_exotic_gases_5 = {
 		category = orbital_mining_deposits
 		produces = {
 			exotic_gases = 7
+			energy = -50
 		}
 	}
 
 	drop_weight = {
-		weight = 0.1
+		weight = 0.05
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
@@ -133,6 +138,7 @@ d_rare_crystals_1 = {
 		category = orbital_mining_deposits
 		produces = {
 			rare_crystals = 2
+			energy = -5
 		}
 	}
 	station = shipclass_mining_station
@@ -159,6 +165,7 @@ d_rare_crystals_2 = {
 		category = orbital_mining_deposits
 		produces = {
 			rare_crystals = 4
+			energy = -30
 		}
 	}
 	station = shipclass_mining_station
@@ -185,6 +192,7 @@ d_rare_crystals_3 = {
 		category = orbital_mining_deposits
 		produces = {
 			rare_crystals = 5
+			energy = -35
 		}
 	}
 	station = shipclass_mining_station
@@ -211,6 +219,7 @@ d_rare_crystals_4 = {
 		category = orbital_mining_deposits
 		produces = {
 			rare_crystals = 6
+			energy = -40
 		}
 	}
 	station = shipclass_mining_station
@@ -237,6 +246,7 @@ d_rare_crystals_5 = {
 		category = orbital_mining_deposits
 		produces = {
 			rare_crystals = 7
+			energy = -50
 		}
 	}
 	station = shipclass_mining_station
@@ -266,6 +276,7 @@ d_volatile_motes_1 = {
 		category = orbital_mining_deposits
 		produces = {
 			volatile_motes = 2
+			energy = -5
 		}
 	}
 
@@ -293,6 +304,7 @@ d_volatile_motes_2 = {
 		category = orbital_mining_deposits
 		produces = {
 			volatile_motes = 4
+			energy = -30
 		}
 	}
 
@@ -304,7 +316,7 @@ d_volatile_motes_2 = {
 	}
 
 	drop_weight = {
-		weight = 0.7
+		weight = 0.6
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
@@ -320,11 +332,12 @@ d_volatile_motes_3 = {
 		category = orbital_mining_deposits
 		produces = {
 			volatile_motes = 5
+			energy = -35
 		}
 	}
 
 	drop_weight = {
-		weight = 0.5
+		weight = 0.3
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
@@ -340,11 +353,12 @@ d_volatile_motes_4 = {
 		category = orbital_mining_deposits
 		produces = {
 			volatile_motes = 6
+			energy = -40
 		}
 	}
 
 	drop_weight = {
-		weight = 0.3
+		weight = 0.15
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
@@ -360,11 +374,12 @@ d_volatile_motes_5 = {
 		category = orbital_mining_deposits
 		produces = {
 			volatile_motes = 7
+			energy = -50
 		}
 	}
 
 	drop_weight = {
-		weight = 0.1
+		weight = 0.05
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
