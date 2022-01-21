@@ -41,3 +41,19 @@ civic_big_architecture = {
 		ship_evasion_mult = -0.2
 	}
 }
+military_ship_order = {		
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	icon = "gfx/interface/icons/governments/civics/civic_naval_contractors.dds"
+	random_weight = { base = 0 }
+	description = "Military_Ship_order_tootip"
+	modifier = {
+		ships_upkeep_mult  = 0.5
+		country_naval_cap_mult = -0.05
+	}
+}
