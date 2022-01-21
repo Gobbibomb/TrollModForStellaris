@@ -30,10 +30,10 @@ utility_component_template = {
 			alloys = @cost1
 		}
 	}
-	ftl = no
+	
+	ftl = yes
 	jumpdrive = yes
 	ship_modifier = {
-		ship_ftl_jumpdrive_range_mult = -0.50
 	}
 	class_restriction = { shipclass_constructor shipclass_colonizer shipclass_science_ship}
 	component_set = "ftl_components"

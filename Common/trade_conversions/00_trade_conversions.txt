@@ -1,0 +1,94 @@
+#First is set to default
+#
+
+basic_conversion =
+{
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 1
+	}
+
+	conversion_rate = {
+		energy = 1
+	}
+
+	economic_category = trade_routes
+}
+
+consumer_goods_conversion =
+{
+	potential = {
+		has_policy_flag = trade_conversion_consumer_goods
+	}
+
+	weight = {
+		weight = 10
+	}
+
+	conversion_rate = {
+		energy = 0.25
+		consumer_goods = 0.5
+	}
+
+	economic_category = trade_routes
+}
+
+unity_conversion =
+{
+	potential = {
+		has_policy_flag = trade_conversion_unity
+	}
+
+	weight = {
+		weight = 10
+	}
+
+	conversion_rate = {
+		energy = 0.25
+		unity = 0.5
+	}
+
+	economic_category = trade_routes
+}
+
+trade_league_conversion =
+{
+	potential = {
+		has_policy_flag = trade_conversion_trade_league
+	}
+
+	weight = {
+		weight = 100
+	}
+
+	conversion_rate = {
+		energy = 0.25
+		consumer_goods = 0.20
+		unity = 0.25
+		society_research = 0.25
+		alloys = 0.01
+	}
+
+	economic_category = trade_routes
+}
+
+science_conversion =
+{
+	potential = {
+		has_policy_flag = trade_conversion_science
+	}
+
+	weight = {
+		weight = 100
+	}
+
+	conversion_rate = {
+		energy = 0.25
+		society_research = 0.50
+	}
+
+	economic_category = trade_routes
+}

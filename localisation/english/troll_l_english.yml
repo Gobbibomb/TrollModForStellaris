@@ -1,0 +1,58 @@
+﻿l_english:
+
+##################
+### START MENU ###
+##################
+###############
+### GENERAL ###
+###############
+
+#Rules
+#Casus Belli & War Goals
+#Special Projects
+#Events"
+
+#Modifiers
+#Traditions
+#Ascension Perks
+#Policies
+
+#Edicts
+edict_costruction: "Aumenta velocità costruzione"
+edict_costruction_desc: "Possiamo aumentare la costruzione impegnandoci sulle compagnie edilizie"
+edict_colonization_boost_troll: "Priorità colonizzazione"
+edict_colonization_boost_troll_desc: "Possiamo convincere il popolo di impegnarsi per colonizzare nuovi mondi"
+edict_free_healt_care: "Cure mediche gratuite"
+edict_free_healt_care_desc: "Possiamo curare gratuitamente la popolazione in cambio aumentando la longevita generale"
+edict_trade_value_boost: "Sussidia il mercato libero"
+edict_trade_value_boost_desc: "Possiamo sussidiare il mercato libero e permettere il commercio"
+
+civic_big_architecture:0 "Grandi architteture navali"
+#  civic_tooltip_big_architecture:0 "Cannot form §YResearch Agreement§!"
+#  edict_capacity_subsidies_tooltip:0 "Increases the upkeep of £job_technician£ $job_technician_plural$ by £minerals£§Y0.5§!"
+
+#Civics
+#Federations
+#Federation Laws
+#Federation Perks
+#Galactic Empire
+#Xenophile
+#Xenophobe
+#Militarist --> william
+#Pacifist
+#Spiritualist
+#Materialist
+#Authoritarian
+#Egalitarian
+
+#Starbase Modules
+
+#Ships and components
+
+#Technologies
+
+#Factions modifiers
+
+# Jobs
+#Armies
+#Galactic Council Resolutions
