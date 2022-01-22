@@ -2,7 +2,6 @@
 [quote=Gobbibomb]
 This mod is stable and playable but [b]currently under further development[/b].
 
-If you plan to host a big multi-session mp game using this mod, feel free to send me a [b]direct message[/b] or leave a [b]comment[/b] in order to be sure that any game breaking updates are not planned as long as you finish your game!
 [/quote]
 
 [hr][/hr]
