@@ -126,59 +126,32 @@ country_event = {
 		#need connect whormole how star connected phi mod not permit this
 		#to do
 		#----------------------------------------
-		if = {
-			limit = {
-				any_system_within_border = {
-					AND = {
+		while = {
+			if = {
+				limit = {
+					any_system_within_border = {
 						AND = {
-							NOT = {
-							has_wormhole = remember_instances #whormole explored
-							}
-							has_wormhole = wormholeFrom #code wrong i not know how found pair wormhole
+							NOT = { has_star_flag = connected }
+							has_natural_wormhole = yes
 						}
-						AND = {
-							NOT = {
-							has_wormhole = remember_instances #whormole explored
+						root = {
+							any_system_within_border = {
+								link_wormholes = prevprev
+								has_star_flag = connected
 							}
-							has_wormhole = wormholeTo  #code wrong i not know how found pair wormhole
 						}
 					}
-					set_star_flag = connected
 				}
+				set_star_flag = connected
 			}
-		}
 			every_system_within_border = {
 				if = {
 					limit = {
-						OR = {
-							has_megastructure = gateway_restored
-							has_megastructure = gateway_final
+						any_neighbor_system = {
+							has_star_flag = connected
 						}
 					}
 					set_star_flag = connected
-				}
-			}
-			while = {
-				limit = {
-					any_system_within_border = {
-						NOT = { has_star_flag = connected }
-						root = {
-							any_system_within_border = {
-								has_hyperlane_to = prevprev
-								has_star_flag = connected
-							}
-						}
-					}
-				}
-				every_system_within_border = {
-					if = {
-						limit = {
-							any_neighbor_system = {
-								has_star_flag = connected
-							}
-						}
-						set_star_flag = connected
-					}
 				}
 			}
 		}
