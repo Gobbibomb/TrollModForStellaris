@@ -22,7 +22,7 @@ d_exotic_gases_1 = {
 		category = orbital_mining_deposits
 		produces = {
 			exotic_gases = 2
-			energy = -5
+			energy = -4
 		}
 	}
 
@@ -99,12 +99,12 @@ d_exotic_gases_4 = {
 		category = orbital_mining_deposits
 		produces = {
 			exotic_gases = 6
-			energy = -40
+			energy = -39
 		}
 	}
 
 	drop_weight = {
-		weight = 0.15
+		weight = 0.1
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
@@ -120,12 +120,12 @@ d_exotic_gases_5 = {
 		category = orbital_mining_deposits
 		produces = {
 			exotic_gases = 7
-			energy = -50
+			energy = -45
 		}
 	}
 
 	drop_weight = {
-		weight = 0.05
+		weight = 0.04
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
@@ -316,7 +316,7 @@ d_volatile_motes_2 = {
 	}
 
 	drop_weight = {
-		weight = 0.6
+		weight = 0.5
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
@@ -337,7 +337,7 @@ d_volatile_motes_3 = {
 	}
 
 	drop_weight = {
-		weight = 0.3
+		weight = 0.2
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
@@ -358,7 +358,7 @@ d_volatile_motes_4 = {
 	}
 
 	drop_weight = {
-		weight = 0.15
+		weight = 0.1
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
