@@ -1,0 +1,24 @@
+
+@s_t4_upkeep_rare = 0.0008
+@s_t5_upkeep_rare = 0.001
+@s_t6_upkeep_rare = 0.0015
+@s_t7_upkeep_rare = 0.002
+
+@m_t4_upkeep_rare = 0.0016
+@m_t5_upkeep_rare = 0.002
+@m_t6_upkeep_rare = 0.003
+@m_t7_upkeep_rare = 0.004
+
+
+@l_t4_upkeep_rare = 0.003
+@l_t5_upkeep_rare = 0.004
+@l_t6_upkeep_rare = 0.006
+@l_t7_upkeep_rare = 0.008
+
+@xl_t5_upkeep_rare = 0.008
+@xl_t6_upkeep_rare = 0.012
+@xl_t7_upkeep_rare = 0.016
+
+@titanic_t5_upkeep_rare = 0.016
+@titanic_t6_upkeep_rare = 0.024
+@titanic_t7_upkeep_rare = 0.032
