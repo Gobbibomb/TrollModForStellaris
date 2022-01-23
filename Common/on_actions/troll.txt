@@ -1,0 +1,7 @@
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		#rules.99				#border gore check
+	}
+}

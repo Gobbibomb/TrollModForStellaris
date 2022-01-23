@@ -20,7 +20,69 @@ country_event = {
 				set_star_flag = connected
 			}
 		}
-		
+		#need connect whormole how star connected phi mod not permit this
+		#to do
+		#----------------------------------------
+		# every_system_within_border = {
+		# 	if = {
+		# 		limit = {
+		# 			OR = {
+		# 				has_natural_wormhole = yes
+		# 				NOT = { has_star_flag = connected }
+		# 			}
+		# 		}
+		# 		prev = {
+		# 			set_star_flag = connected
+		# 		}
+		# 	}
+		# }
+		#-----------------------------------------
+		every_system_within_border = {
+			limit = {
+				NOT = { has_star_flag = connected }
+				has_natural_wormhole = yes
+			}
+			if = {
+				limit = {
+					has_natural_wormhole = yes
+				}
+				set_star_flag = connected
+			}
+		}
+		#versione cool by test
+		#need connect whormole how star connected phi mod not permit this
+		#to do
+		#----------------------------------------
+		# while = {
+		# 	if = {
+		# 		limit = {
+		# 			any_system_within_border = {
+		# 				AND = {
+		# 					NOT = { has_star_flag = connected }
+		# 					has_natural_wormhole = yes
+		# 				}
+		# 				root = {
+		# 					any_system_within_border = {
+		# 						link_wormholes = prevprev
+		# 						has_star_flag = connected
+		# 					}
+		# 				}
+		# 			}
+		# 		}
+		# 		set_star_flag = connected
+		# 	}
+		# 	every_system_within_border = {
+		# 		if = {
+		# 			limit = {
+		# 				any_neighbor_system = {
+		# 					has_star_flag = connected
+		# 				}
+		# 			}
+		# 			set_star_flag = connected
+		# 		}
+		# 	}
+		# }
+		#----------------------------------------
 		every_system_within_border = {
 			limit = {
 				NOT = { has_star_flag = connected }
@@ -123,38 +185,7 @@ country_event = {
 				}
 			}
 		}
-		#need connect whormole how star connected phi mod not permit this
-		#to do
-		#----------------------------------------
-		while = {
-			if = {
-				limit = {
-					any_system_within_border = {
-						AND = {
-							NOT = { has_star_flag = connected }
-							has_natural_wormhole = yes
-						}
-						root = {
-							any_system_within_border = {
-								link_wormholes = prevprev
-								has_star_flag = connected
-							}
-						}
-					}
-				}
-				set_star_flag = connected
-			}
-			every_system_within_border = {
-				if = {
-					limit = {
-						any_neighbor_system = {
-							has_star_flag = connected
-						}
-					}
-					set_star_flag = connected
-				}
-			}
-		}
+		
 		#######################################
 		#taking care of the sealed entry system
 		if = {
