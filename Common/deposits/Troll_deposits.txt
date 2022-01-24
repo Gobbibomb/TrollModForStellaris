@@ -63,3 +63,25 @@ d_troll_2 = {
 		weight = 100
 	}
 }
+d_troll_3 = {
+	station = shipclass_mining_station 
+	is_for_colonizeable = no
+	
+	resources = { 
+		category = orbital_mining_deposits
+		produces = {
+			society_research = -20
+			minor_artifacts  = 0.1
+		}
+	}
+	
+	potential = {
+		 OR = {
+		 	is_planet_class = pc_shattered
+		 }	
+	}
+	
+	drop_weight = {
+		weight = 10
+	}
+}

@@ -1,0 +1,53 @@
+namespace = growth
+country_event = {
+	id = growth.1
+
+	title = "growth.1.name"
+	desc = "growth.1.desc"
+	is_triggered_only = yes
+	hide_window = no
+	immediate = {
+		
+			# if = {
+			# 	limit = { pop_has_ethic = ethic_xenophobe }
+			# 	pop_remove_ethic = ethic_xenophobe
+			# }
+			every_owned_planet = {
+				limit = {
+					any_owned_pop = {
+						pop_has_trait = trait_ritual_of_sex
+					}
+				}
+				add_modifier = {
+					modifier = "supergrowth"
+					days = 90
+				}
+			}
+			
+			
+	}
+		#country_event = { id = growth.2 days = 90 }
+}
+
+# country_event = {
+# 	id = growth.2
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		every_owned_pop = {
+# 			limit = {
+# 				OR = {
+# 					pop_has_trait = trait_super_growth
+# 				}
+# 			}
+# 			# if = {
+# 			# 	limit = { pop_has_ethic = ethic_xenophobe }
+# 			# 	pop_remove_ethic = ethic_xenophobe
+# 			# }
+# 			if = {
+# 				limit = { pop_has_modifier = supergrowth }
+# 					remove_modifier = "supergrowth"
+# 			}
+# 		}
+# 	}
+ #}

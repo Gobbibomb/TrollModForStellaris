@@ -464,7 +464,7 @@ utility_component_template = {
 		upkeep = {
 			energy = @shield_s_t6_upkeep_energy
 			alloys = @shield_s_t6_upkeep_alloys
-			sr_dark_matter = @s_t6_upkeep_rare
+			sr_dark_matter = @s_t5_upkeep_rare #giusto così
 		}
 	}
 	modifier = {
@@ -498,7 +498,7 @@ utility_component_template = {
 		upkeep = {
 			energy = @shield_m_t6_upkeep_energy
 			alloys = @shield_m_t6_upkeep_alloys
-			sr_dark_matter = @m_t6_upkeep_rare #giusto così
+			sr_dark_matter = @m_t5_upkeep_rare #giusto così
 		}
 	}
 	modifier = {
@@ -532,7 +532,7 @@ utility_component_template = {
 		upkeep = {
 			energy = @shield_l_t6_upkeep_energy
 			alloys = @shield_l_t6_upkeep_alloys
-			sr_dark_matter = @l_t6_upkeep_rare #giusto così
+			sr_dark_matter = @l_t5_upkeep_rare #giusto così
 		}
 	}
 	modifier = {

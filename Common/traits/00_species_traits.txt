@@ -41,3 +41,24 @@ trait_enduring = {
 	opposites = { "trait_venerable" "trait_fleeting" "trait_fleeting_lithoid" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 }
+trait_ritual_of_sex = {
+	cost = 3
+	modification = no
+	opposites = { "trait_venerable" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		pop_growth_speed = -0.1
+	}
+}
+trait_super_growth= {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	opposites = { "trait_venerable" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		pop_growth_speed = 0.50
+		pop_jobs_produces_mult = -0.15
+	}
+}
