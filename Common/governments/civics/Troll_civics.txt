@@ -66,7 +66,6 @@ civic_small_architecture = {
 civic_satatanic_ship = {
 	#gfx/interface/icons/planet_modifiers/trait_robot_awoken.dds
 	modification = no		
-	icon = "gfx/interface/icons/governments/civics/civic_functional_architecture.dds"
 	potential = {
 		civics = {
 			NOR = {
@@ -91,7 +90,8 @@ civic_hive_defense_ephapse = {
 	potential = { authority = { value = auth_hive_mind } }
 	random_weight = { base = 5 }
 	modifier = {
-		ship_home_territory_fire_rate_mult = 1
+		ship_home_territory_fire_rate_mult = 2
+		ship_fire_rate_mult = -0.5
 		ship_speed_mult = -0.20
 	}
 }
