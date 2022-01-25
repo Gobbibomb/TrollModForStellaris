@@ -3,7 +3,7 @@
 civic_big_architecture = {
 	#gfx/interface/icons/planet_modifiers/trait_robot_awoken.dds
 	modification = no		
-	icon = "gfx/interface/icons/governments/civics/civic_functional_architecture.dds"
+	icon = "gfx/interface/icons/governments/civics/civic_big_architecture.dds"
 	potential = {
 		civics = {
 			NOR = {
@@ -36,7 +36,7 @@ civic_big_architecture = {
 civic_small_architecture = {
 	#gfx/interface/icons/planet_modifiers/trait_robot_awoken.dds
 	modification = no		
-	icon = "gfx/interface/icons/governments/civics/civic_functional_architecture.dds"
+	icon = "gfx/interface/icons/governments/civics/civic_small_architecture.dds"
 	potential = {
 		civics = {
 			NOR = {
