@@ -1,0 +1,1393 @@
+
+@ag_ancient_stargate_distance = 35
+@ag_ancient_stargate_angle = 275
+
+isolated_home_system_initializer = {
+	class = "sc_black_hole"
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 128
+	}
+	
+	flags = { empire_home_system isolated_home_system_gate isolated_home_system_origin }
+	
+	usage = custom_empire
+	max_instances = 1
+	
+	planet = {
+		class = "pc_black_hole"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 30
+		has_ring = no
+	}
+	
+	change_orbit = 128
+	
+	planet = {
+		count = { min = 2 max = 5 }
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		home_planet = yes
+		
+		class = ideal_planet_class
+		orbit_distance = 35
+		orbit_angle = random
+		size = { min = 16 max = 20 }
+		has_ring = no
+		
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+			generate_empire_home_planet = yes
+		}
+	}
+
+	init_effect = {
+#		spawn_megastructure = {
+#			type = ag_ancient_gate_base_alt
+#			orbit_distance = @ag_ancient_stargate_distance
+#			orbit_angle = @ag_ancient_stargate_angle
+#			location = solar_system
+#		}
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_1_spawned
+				}
+				iso_init_create_cluster_style_1 = { home_system = isolated_home_system_init_04 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_2_spawned
+				}
+				iso_init_create_cluster_style_2 = { home_system = isolated_home_system_init_04 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_3_spawned
+				}
+				iso_init_create_cluster_style_3 = { home_system = isolated_home_system_init_04 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_4_spawned
+				}
+				iso_init_create_cluster_style_4 = { home_system = isolated_home_system_init_04 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_5_spawned
+				}
+				iso_init_create_cluster_style_5 = { home_system = isolated_home_system_init_04 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_6_spawned
+				}
+				iso_init_create_cluster_style_6 = { home_system = isolated_home_system_init_04 }
+			}
+		}
+	}
+}
+
+isolated_home_system_initializer_ringworld = {
+	class = "sc_black_hole"
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 128
+	}
+	
+	flags = { empire_home_system isolated_home_system_gate isolated_home_system_origin }
+	
+	usage = origin
+	max_instances = 1
+	
+	planet = {
+		class = "pc_black_hole"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 30
+		has_ring = no
+	}
+	
+	change_orbit = 128
+	
+	planet = {
+		count = { min = 2 max = 5 }
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		home_planet = yes
+		
+		class = pc_ringworld_habitable
+		orbit_distance = 35
+		orbit_angle = random
+		size = { min = 16 max = 20 }
+		has_ring = no
+		
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+			generate_empire_home_planet = yes
+		}
+	}
+
+	init_effect = {
+#		spawn_megastructure = {
+#			type = ag_ancient_gate_base_alt
+#			orbit_distance = @ag_ancient_stargate_distance
+#			orbit_angle = @ag_ancient_stargate_angle
+#			location = solar_system
+#		}
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_1_spawned
+				}
+				iso_init_create_cluster_style_1 = { home_system = isolated_home_system_init_04_ringworld }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_2_spawned
+				}
+				iso_init_create_cluster_style_2 = { home_system = isolated_home_system_init_04_ringworld }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_3_spawned
+				}
+				iso_init_create_cluster_style_3 = { home_system = isolated_home_system_init_04_ringworld }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_4_spawned
+				}
+				iso_init_create_cluster_style_4 = { home_system = isolated_home_system_init_04_ringworld }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_5_spawned
+				}
+				iso_init_create_cluster_style_5 = { home_system = isolated_home_system_init_04_ringworld }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_6_spawned
+				}
+				iso_init_create_cluster_style_6 = { home_system = isolated_home_system_init_04_ringworld }
+			}
+		}
+	}
+}
+
+isolated_home_system_initializer_habitat = {
+	class = "sc_black_hole"
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 128
+	}
+	
+	flags = { empire_home_system isolated_home_system_gate isolated_home_system_origin }
+	
+	usage = origin
+	max_instances = 1
+	
+	planet = {
+		class = "pc_black_hole"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 30
+		has_ring = no
+	}
+	
+	change_orbit = 128
+	
+	planet = {
+		count = { min = 2 max = 5 }
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		home_planet = yes
+		
+		class = pc_habitat
+		orbit_distance = 35
+		orbit_angle = random
+		size = { min = 16 max = 20 }
+		has_ring = no
+		
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+			generate_empire_home_planet = yes
+		}
+	}
+
+	init_effect = {
+#		spawn_megastructure = {
+#			type = ag_ancient_gate_base_alt
+#			orbit_distance = @ag_ancient_stargate_distance
+#			orbit_angle = @ag_ancient_stargate_angle
+#			location = solar_system
+#		}
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_1_spawned
+				}
+				iso_init_create_cluster_style_1 = { home_system = isolated_home_system_init_04_habitat }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_2_spawned
+				}
+				iso_init_create_cluster_style_2 = { home_system = isolated_home_system_init_04_habitat }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_3_spawned
+				}
+				iso_init_create_cluster_style_3 = { home_system = isolated_home_system_init_04_habitat }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_4_spawned
+				}
+				iso_init_create_cluster_style_4 = { home_system = isolated_home_system_init_04_habitat }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_5_spawned
+				}
+				iso_init_create_cluster_style_5 = { home_system = isolated_home_system_init_04_habitat }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_global_flag = isolated_cluster_style_6_spawned
+				}
+				iso_init_create_cluster_style_6 = { home_system = isolated_home_system_init_04_habitat }
+			}
+		}
+	}
+}
+
+isolated_home_system_init_01 = {
+	class = "sc_black_hole"
+	
+	flags = { empire_cluster isolated_home_system isolated_home_system_gate isolated_home_flag_system isolated_home_system_init_01 is_botleneck }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 135
+	}
+	
+	planet = {
+		class = "pc_black_hole"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 30
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_broken"
+		orbit_distance = 75
+		orbit_angle = random
+		size = 16
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	change_orbit = 60
+	
+	planet = {
+		count = { min = 2 max = 5 }
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+
+	init_effect = {
+#		spawn_megastructure = {
+#			type = ag_ancient_gate_base_alt
+#			orbit_distance = @ag_ancient_stargate_distance
+#			orbit_angle = @ag_ancient_stargate_angle
+#			location = solar_system
+#		}
+	}
+}
+
+isolated_home_system_init_02 = {
+	class = "rl_binary_stars"
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 135
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 250
+	}
+	
+	flags = { empire_cluster isolated_home_system isolated_home_system_init_02 }
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 10
+		orbit_angle = 0
+		size = 18
+		has_ring = no
+	}
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 25
+		orbit_angle = 180
+		size = 25
+		has_ring = no
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		class = pc_molten
+		orbit_distance = 20
+		orbit_angle = random
+		size = 21
+		has_ring = no
+	}
+
+	planet = {
+		class = pc_toxic
+		orbit_distance = 25
+		orbit_angle = random
+		size = 17
+		has_ring = no
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_toxic"
+		orbit_distance = 25
+		orbit_angle = random
+		size = { min = 14 max = 24 }
+		has_ring = no
+		
+		flags = { second_colony_candidate }
+		
+		modifiers = none
+		anomaly = none
+	}
+
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 30
+		orbit_angle = random
+		size = 35
+		has_ring = no
+
+		change_orbit = 11
+		
+		moon = {
+			class = pc_molten
+			orbit_distance = 5
+			orbit_angle = random
+			size = 6
+			has_ring = no
+		}
+	}
+
+	change_orbit = 60
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_ice_asteroid
+		orbit_distance = 0
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+}
+
+isolated_home_system_init_03 = {
+	class = "sc_a"
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 90
+	}
+	
+	flags = { empire_cluster isolated_home_system isolated_home_system_init_03 }
+	
+	planet = {
+		class = "pc_a_star"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 40
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 60
+		orbit_angle = random
+		size = 10
+		has_ring = no
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 30
+		orbit_angle = random
+		size = 40
+		has_ring = no
+		
+		moon = {
+			class = "pc_frozen"
+			size = 5
+			orbit_distance = 18
+			orbit_angle = random
+			has_ring = no
+		}
+		moon = {
+			class = "pc_toxic"
+			orbit_distance = 5
+			orbit_angle = random
+			size = { min = 14 max = 24 }
+			has_ring = no
+			
+			flags = { second_colony_candidate }
+			
+			modifiers = none
+			anomaly = none
+		}		
+	}
+	
+	planet = {
+		class = "pc_barren_cold"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 10
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 30
+		has_ring = no
+		
+		moon = {
+			class = "pc_frozen"
+			size = 8
+			orbit_distance = 14
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		class = "pc_barren"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 15
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_frozen"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 20
+		has_ring = no
+	}
+}
+
+isolated_home_system_init_04 = {
+	class = "sc_g"
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 165
+	}
+	
+	flags = { empire_home_system isolated_home_system isolated_home_system_init_04 }
+	
+	planet = {
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 25
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 55
+		orbit_angle = random
+		size = 14
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_toxic"
+		orbit_distance = 35
+		orbit_angle = random
+		size = 17
+		has_ring = no
+		
+		flags = { isolated_home_planet }
+		
+		moon = {
+			class = "pc_barren_cold"
+			size = 5
+			orbit_distance = 12
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		class = "pc_barren"
+		orbit_distance = 25
+		orbit_angle = random
+		size = 20
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_barren_cold"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 15
+		has_ring = yes
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 2 max = 6 }
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 40
+		orbit_angle = random
+		size = 30
+		has_ring = no
+		
+		change_orbit = 6
+		
+		moon = {
+			class = "pc_barren_cold"
+			size = 6
+			orbit_distance = 10
+			orbit_angle = random
+			has_ring = no
+		}
+		moon = {
+			class = "pc_frozen"
+			size = 9
+			orbit_distance = 2.5
+			orbit_angle = random
+			has_ring = no
+		}
+		moon = {
+			class = "pc_frozen"
+			size = 9
+			orbit_distance = 2.5
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 30
+		orbit_angle = random
+		size = 30
+		has_ring = yes
+		
+		change_orbit = 6
+		
+		moon = {
+			class = "pc_frozen"
+			size = 6
+			orbit_distance = 16
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+}
+
+isolated_home_system_init_04_ringworld = {
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
+	}
+
+	flags = { empire_home_system isolated_home_system isolated_home_system_init_04 }
+	#usage = origin
+
+	class = "sc_g"
+
+	planet = {
+		count = 1
+		class = pc_g_star
+		size = 26
+		orbit_distance = 0
+		orbit_angle = 0
+	}
+
+	change_orbit = 45
+
+	planet = {
+		count = 1
+		class = "pc_ringworld_seam"
+		name = "NAME_Ring_Section"
+		orbit_distance = 0
+		orbit_angle = 240
+	}
+
+	planet = {
+		count = 1
+		class = "pc_ringworld_habitable"
+		orbit_distance = 0
+		orbit_angle = 30
+
+		deposit_blockers = none
+		modifiers = none
+		
+		flags = { isolated_home_planet ignore_startup_effect }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+
+	planet = {
+		count = 1
+		class = "pc_ringworld_tech"
+		name = "NAME_Ring_Section"
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+
+	planet = {
+		count = 1
+		class = "pc_ringworld_tech_damaged"
+		name = "NAME_Ring_Section"
+		orbit_distance = 0
+		orbit_angle = 120
+	}
+
+	planet = {
+		count = 1
+		name = "Irreparable Damage"
+		class = "pc_ringworld_seam_damaged"
+		orbit_distance = 0
+		orbit_angle = 30
+		flags = { ignore_startup_effect starting_mining_target starting_deposit}
+
+		init_effect = {
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				entity_offset_height = -15
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = 0
+				}
+			}
+			set_deposit = d_minerals_10
+			set_planet_flag = starting_mining_target
+			set_planet_flag = starting_deposit
+		}
+	}
+
+	planet = {
+		count = 1
+		name = "The Interloper"
+		class = "pc_shattered_2"
+		orbit_distance = -5
+		orbit_angle = 0
+		size = 5
+		has_ring = no
+
+		flags = { ignore_startup_effect starting_mining_target starting_deposit}
+		init_effect = {
+			set_deposit = d_minerals_10
+		}
+	}
+
+	planet = {
+		count = 1
+		name = "NAME_Ring_Section"
+		class = "pc_ringworld_tech_damaged"
+		orbit_distance = 5
+		orbit_angle = 30
+	}
+
+	change_orbit = 55
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		size = 5
+		orbit_distance = 0
+		orbit_angle = random
+	}
+
+	change_orbit = 90
+
+	planet = {
+		count = 1
+		class = pc_gas_giant
+		orbit_distance = 0
+		orbit_angle = random
+		size = 25
+		
+		moon = {
+			count = { min = 1 max = 4 }
+			size = { min = 8 max = 20 }
+			orbit_distance = 16
+			orbit_angle = random
+		}
+	}
+
+	change_orbit = 30
+
+	planet = {
+		count = { min = 0 max = 2 }
+		class = pc_frozen
+		size = { min = 7 max = 16 }
+		orbit_distance = 20
+		orbit_angle = random
+	}
+
+	init_effect = {
+		generate_home_system_resources = yes
+		spawn_megastructure = {
+			type = "ring_world_ruined"
+			orbit_angle = 0
+			orbit_distance = 45
+			location = planet
+		}
+		spawn_megastructure = {
+			type = "ring_world_ruined"
+			orbit_angle = 180
+			orbit_distance = 45
+			location = planet
+		}
+	}
+}
+
+isolated_home_system_init_04_habitat = {
+	class = "sc_trinary_1"
+#	usage = origin
+	flags = { empire_home_system isolated_home_system isolated_home_system_init_04 }
+		
+	planet = {
+        count = 1
+        class = pc_g_star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 27
+        has_ring = no
+    }
+
+    planet = {
+        count = 1
+        class = pc_m_star
+        orbit_distance = 240
+      	orbit_angle = 135
+        size = 35
+        has_ring = no
+        satellite_naming_policy = upper_case_roman_numerals
+
+        change_orbit = 30
+
+        planet = {
+       	 count = 1
+			class = pc_molten
+			size = 13
+			orbit_distance = 30
+			orbit_angle = random
+			satellite_naming_policy = lower_case_latin_letters
+
+			moon = {
+				count = { min = 0 max = 1 }
+				class = pc_molten
+				size = 4
+				orbit_angle = random
+				orbit_distance = 15
+			}
+		}
+
+		planet = {
+        	count = 1
+			class = pc_barren
+			orbit_distance = 25
+			orbit_angle = random
+			size = 17
+			flags = { ignore_startup_effect habitat_2_planet has_megastructure }
+			has_ring = yes
+
+			moon = {
+				count = 1
+				class = pc_habitat
+				size = 6
+				orbit_distance = 5
+				orbit_angle = random
+
+				flags = { void_dweller_habitat_2 megastructure habitat mining_habitat }
+				deposit_blockers = none
+			}
+
+			init_effect = {
+				set_deposit = d_minerals_4
+			}
+		}
+
+		planet = {
+       		count = 1
+			class = pc_gas_giant
+			size = 25
+			orbit_distance = 35
+			orbit_angle = random
+			has_ring = no
+
+			satellite_naming_policy = lower_case_latin_letters
+			flags = { ignore_startup_effect mining_planet }
+
+			moon = {
+				count = { min = 0 max = 1 }
+				class = pc_barren_cold
+				size = 5
+				orbit_angle = random
+				orbit_distance = 15
+			}
+
+			init_effect = {
+				set_deposit = d_energy_6
+			}
+		}
+	}
+
+    planet = {
+        count = 1
+        class = pc_k_star
+        orbit_distance = 0
+        orbit_angle = 85
+        size = 25
+		has_ring = no
+		
+        satellite_naming_policy = upper_case_roman_numerals
+
+        planet = {
+       		count = 1
+			class = pc_barren
+			size = 8
+			orbit_distance = 55
+			orbit_angle = random
+			has_ring = no
+
+			satellite_naming_policy = lower_case_latin_letters
+
+			moon = {
+				count = 1
+				class = pc_barren_cold
+				size = 4
+				orbit_distance = 15
+				orbit_angle = random
+
+				flags = { ignore_startup_effect }
+
+				init_effect = {
+					set_deposit = d_minerals_1
+				}
+			}
+		}
+
+		planet = {
+			count = 1
+			class = pc_barren_cold
+			size = 12
+			orbit_distance = 25
+			orbit_angle = random
+			has_ring = no
+
+			satellite_naming_policy = lower_case_latin_letters
+
+			moon = {
+				count = 1
+				class = pc_barren_cold
+				size = 6
+				orbit_distance = 15
+				orbit_angle = random
+
+				flags = { ignore_startup_effect }
+
+				init_effect = {
+					set_deposit = d_minerals_1
+				}
+			}
+		}
+
+		planet = {
+			count = 1
+			class = pc_gas_giant
+			size = 28
+			orbit_distance = 25
+			orbit_angle = random
+			has_ring = yes
+
+			flags = { ignore_startup_effect habitat_3_planet has_megastructure }
+	
+			moon = {
+				count = 1
+				class = pc_habitat
+				size = 6
+				orbit_distance = 5
+				orbit_angle = random
+
+				flags = { void_dweller_habitat_3 megastructure habitat energy_habitat }
+				deposit_blockers = none
+			}
+
+			init_effect = {
+				set_deposit = d_energy_6
+			}
+		}
+	}
+
+    change_orbit = -210
+
+    planet = {
+		count = 1
+		class = pc_molten
+		size = 7
+		orbit_distance = 15
+		orbit_angle = random
+
+		flags = { ignore_startup_effect mining_planet }
+
+		init_effect = {
+			set_deposit = d_energy_4
+		}
+	}
+
+	planet = {
+		count = 1
+		class = pc_toxic
+		size = 19
+		orbit_distance = 20
+		orbit_angle = random
+
+		flags = { ignore_startup_effect mining_planet }
+
+		init_effect = {
+			set_deposit = d_minerals_4
+		}
+	}
+
+	planet = {
+		count = 1
+		name = "NAME_The_Fragments"
+		class = pc_shattered
+		orbit_distance = 20
+		orbit_angle = random
+		size = 17
+
+		flags = { ignore_startup_effect has_megastructure }
+
+		moon = {
+			count = 1
+			class = pc_habitat
+			size = 6
+			orbit_distance = 5
+			orbit_angle = random
+			
+			flags = { isolated_home_planet void_dweller_habitat_1 special_start_planet megastructure habitat research_habitat }
+			deposit_blockers = none
+		}
+
+		init_effect = {
+			set_deposit = d_physics_3
+		}
+	}
+	
+	planet = {
+		count = 1
+		class = pc_gas_giant
+		size = 30
+		orbit_distance = 20
+		orbit_angle = random
+
+		moon = {
+			count = { min = 1 max = 2 }
+			class = pc_frozen
+			size = { min = 4 max = 7 }
+			orbit_distance = 15
+			orbit_angle = random
+		}
+	}
+
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+}
+
+isolated_home_system_init_05 = {
+	class = "sc_k"
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 85
+	}
+	
+	flags = { empire_cluster isolated_home_system isolated_home_system_init_05 }
+	
+	planet = {
+		class = "pc_k_star"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 30
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 40
+		orbit_angle = random
+		size = 15
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 10
+		has_ring = no
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+	count = { min = 2 max = 4 }
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_toxic"
+		orbit_distance = 40
+		orbit_angle = random
+		size = { min = 12 max = 18 }
+		has_ring = yes
+		
+		flags = { first_colony_candidate }
+		
+		modifiers = none
+		anomaly = none
+	}
+	
+	planet = {
+		class = "pc_toxic"
+		orbit_distance = 25
+		orbit_angle = random
+		size = 20
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_barren"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 20
+		has_ring = no
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 30
+		orbit_angle = random
+		size = 35
+		has_ring = no
+	}	
+}
+
+isolated_home_system_init_06 = {
+	class = "sc_m"
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 50
+	}
+	
+	flags = { empire_cluster isolated_home_system isolated_home_system_init_06 }
+
+	planet = {
+		class = pc_m_star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 27
+		has_ring = no
+	}
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 0 max = 3 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = pc_molten
+		orbit_distance = 35
+		orbit_angle = random
+		size = 13
+		has_ring = yes
+
+		change_orbit = 20
+
+		moon = {
+			class = pc_barren
+			orbit_distance = 5
+			orbit_angle = random
+			size = 6
+			has_ring = no
+		}
+	}
+
+	planet = {
+		class = "pc_toxic"
+		orbit_distance = 30
+		orbit_angle = random
+		size = { min = 14 max = 24 }
+		has_ring = no
+		
+		flags = { second_colony_candidate }
+		
+		modifiers = none
+		anomaly = none
+
+		moon = {
+			class = "pc_broken"
+			size = 12
+			orbit_distance = 14
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+
+	planet = {
+		class = "pc_barren_cold"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 12
+		has_ring = no
+
+		change_orbit = 12
+
+		moon = {
+			class = "pc_frozen"
+			orbit_distance = 5
+			orbit_angle = random
+			size = 5
+			has_ring = no
+		}
+	}
+
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 20
+		orbit_angle = random
+		size = 42
+		has_ring = yes
+	}
+
+	planet = {
+		class = "pc_frozen"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 19
+		has_ring = yes
+
+		change_orbit = 12
+
+		moon = {
+			class = "pc_frozen"
+			orbit_distance = 5
+			orbit_angle = random
+			size = 5
+			has_ring = no
+		}
+	}
+}
+
+isolated_home_system_init_07 = {
+	class = "sc_neutron_star"
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 130
+	}
+	
+	flags = { empire_cluster isolated_home_system isolated_home_system_init_07 }
+
+	planet = {
+		class = pc_neutron_star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 24
+		has_ring = no
+	}
+
+	change_orbit = 30
+
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 30
+		orbit_angle = random
+		size = 11
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_toxic"
+		orbit_distance = 30
+		orbit_angle = random
+		size = 15
+		has_ring = yes
+	}
+
+	planet = {
+		class = "pc_toxic"
+		orbit_distance = 30
+		orbit_angle = random
+		size = 8
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_toxic"
+		orbit_distance = 40
+		orbit_angle = random
+		size = { min = 12 max = 18 }
+		has_ring = yes
+		
+		flags = { first_colony_candidate }
+		
+		modifiers = none
+		anomaly = none
+
+		change_orbit = 12
+		
+		moon = {
+			class = "pc_frozen"
+			orbit_distance = 5
+			orbit_angle = random
+			size = 14
+			has_ring = no
+		}
+	}
+
+	change_orbit = 20
+
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 30
+		orbit_angle = random
+		size = 32
+		has_ring = yes
+	}
+}

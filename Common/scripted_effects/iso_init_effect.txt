@@ -1,0 +1,55 @@
+change_starting_planet_class_normal = {
+	event_target:isolated_home_system_init_04 = {
+		random_system_planet = {
+			limit = { has_planet_flag = isolated_home_planet }
+			save_event_target_as = new_home_planet
+			if = {
+				limit = {
+					root = {
+						NOR = {
+							has_origin = origin_shattered_ring_isolated
+							has_origin = origin_void_dwellers_isolated
+						}
+					}
+				}
+				change_pc = $PLANET_CLASS$
+			}
+		}
+	}
+	if = {
+		limit = {
+			num_guaranteed_colonies >= 1
+		}
+		random_system = {
+			limit = {
+				iso_init_same_flag_system = yes
+				any_system_planet = { has_planet_flag = isolated_home_colony_1 }
+			}
+			random_system_planet = {
+				limit = { has_planet_flag = isolated_home_colony_1 }
+				set_planet_flag = prescripted_ideal
+				solar_system = { set_star_flag = neighbor_t1_first_colony }
+				change_pc = $PLANET_CLASS$
+				reroll_planet = yes
+			}
+		}
+	}
+	if = {
+		limit = {
+			num_guaranteed_colonies >= 2
+		}
+		random_system = {
+			limit = {
+				iso_init_same_flag_system = yes
+				any_system_planet = { has_planet_flag = isolated_home_colony_2 }
+			}
+			random_system_planet = {
+				limit = { has_planet_flag = isolated_home_colony_2 }
+				set_planet_flag = prescripted_ideal
+				solar_system = { set_star_flag = neighbor_t2_second_colony }
+				change_pc = $PLANET_CLASS$
+				reroll_planet = yes
+			}
+		}
+	}
+}

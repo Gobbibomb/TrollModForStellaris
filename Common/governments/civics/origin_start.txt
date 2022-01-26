@@ -2,9 +2,9 @@
 origin_star_cluster = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_shattered_ring.dds"
-	picture = GFX_origin_shattered_ring # da cambiare
+	picture = GFX_origins_shattered_ring # da cambiare
 
-	#starting_colony = pc_ringworld_habitable
+	starting_colony = isolated_home_system_initializer
 	initializers = { start_cluster_initializer }
 	max_once_global = yes
 	

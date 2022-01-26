@@ -5,3 +5,8 @@ on_monthly_pulse_country = {
 		#rules.99				#border gore check
 	}
 }
+on_game_start_country = {
+	events = {
+		extragalactic_cluster.1
+	}
+}
