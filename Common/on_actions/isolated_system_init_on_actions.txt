@@ -4,5 +4,6 @@ on_game_start_country = {
 		iso_init.11
 		iso_init.12
 		iso_init.13
+		iso_init.3
 	}
 }

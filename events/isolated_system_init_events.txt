@@ -492,20 +492,6 @@ country_event = {
 				set_location = root.capital_star
 			}
 		}
-		create_fleet = {
-			set_take_point = yes
-			effect = {
-				set_owner = root
-				while = {
-					count = 3
-					create_ship = {
-						name = random
-						random_existing_design = corvette
-					}
-				}
-				set_location = root.capital_star
-			}
-		}
 		country_event = { id = iso_init.2 days = 1 }
 	}
 }
@@ -974,20 +960,6 @@ country_event = {
 				set_location = root.capital_star
 			}
 		}
-		create_fleet = {
-			set_take_point = yes
-			effect = {
-				set_owner = root
-				while = {
-					count = 3
-					create_ship = {
-						name = random
-						random_existing_design = corvette
-					}
-				}
-				set_location = root.capital_star
-			}
-		}
 		capital_scope = {
 			system_star = {
 				set_deposit = d_energy_10
@@ -1365,20 +1337,6 @@ country_event = {
 				set_location = root.capital_star
 			}
 		}
-		create_fleet = {
-			set_take_point = yes
-			effect = {
-				set_owner = root
-				while = {
-					count = 3
-					create_ship = {
-						name = random
-						random_existing_design = corvette
-					}
-				}
-				set_location = root.capital_star
-			}
-		}
 		every_owned_planet = {
 			limit = {
 				exists = this
@@ -1568,10 +1526,11 @@ country_event = {
 				}
 			}
 		}
+		
 	}
 }
 
-country_event = {
+event = {
 	id = iso_init.3
 	hide_window = no
 	is_triggered_only = yes
@@ -1580,14 +1539,14 @@ country_event = {
 		random_system = {
 			limit = { 
 				has_star_flag = isolated_home_system_init_01
-				has_natural_wormhole = no
+				
 			}
 			save_event_target_as = isolated_home_system_init_01
 		}
 		random_system = {
 			limit = {
-				iso_init_unflaged = yes
-				has_natural_wormhole = no				
+				iso_init_unflaged = yes			
+				has_natural_wormhole = no
 			}
 			event_target:isolated_home_system_init_01 = {
 				spawn_natural_wormhole = {
