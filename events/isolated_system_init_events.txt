@@ -475,8 +475,12 @@ country_event = {
 				set_location = root.capital_star
 			}
 		}
+		owner = {
+			add_research_option = tech_wormhole_stabilization
+		}
 		country_event = { id = iso_init.2 days = 1 }
 	}
+	
 }
 #Triggered 1 day after game started.
 country_event = {
