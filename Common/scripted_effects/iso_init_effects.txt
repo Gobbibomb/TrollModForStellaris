@@ -192,6 +192,7 @@ iso_init_create_cluster_style_1 = {
 			hyperlane = no
 			initializer = isolated_home_system_init_01
 		}
+		
 		random_system = {
 			limit = {
 				has_star_flag = isolated_home_flag_system
