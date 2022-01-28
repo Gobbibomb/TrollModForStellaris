@@ -6,8 +6,6 @@ iso_init_unflaged = {
 		has_star_flag = isolated_home_system_init_style_4_flaged
 		has_star_flag = isolated_home_system_init_style_5_flaged
 		has_star_flag = isolated_home_system_init_style_6_flaged
-		has_star_flag = isolated_home_system_init_style_7_flaged
-		has_star_flag = isolated_home_system_init_style_8_flaged
 	}
 }
 

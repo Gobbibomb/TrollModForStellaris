@@ -50,6 +50,7 @@ start_cluster_initializer = {
 			prevent_anomaly = yes
 			generate_empire_home_planet = yes
 		}
+		save_event_target_as = Planet_origin
 	}
 
 	init_effect = {
@@ -143,8 +144,6 @@ start_cluster_initializer = {
 					has_star_flag = isolated_home_system_init_style_4_flaged
 					has_star_flag = isolated_home_system_init_style_5_flaged
 					has_star_flag = isolated_home_system_init_style_6_flaged
-					has_star_flag = isolated_home_system_init_style_7_flaged
-					has_star_flag = isolated_home_system_init_style_8_flaged
 					}
 					has_natural_wormhole = no				
 				}
@@ -186,10 +185,10 @@ start_cluster_initializer = {
 					from = event_target:isolated_home_system_init_02
 					to = event_target:isolated_home_system_init_05
 				}
-				add_hyperlane = {
-					from = event_target:isolated_home_system_init_02
-					to = event_target:isolated_home_system_init_06
-				}
+				# add_hyperlane = {
+				# 	from = event_target:isolated_home_system_init_02
+				# 	to = event_target:isolated_home_system_init_06
+				# }
 			}
 			event_target:isolated_home_system_init_03 = {
 				add_hyperlane = {
@@ -217,7 +216,10 @@ start_cluster_initializer = {
 					to = event_target:isolated_home_system_init_06
 				}
 			}
-		
+			event_target:planet_origin = {
+				#remove_planet = yes
+				#delete_planet = yes
+			}
 		set_spawn_system_batch = end
 	}
 }
