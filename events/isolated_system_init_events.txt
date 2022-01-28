@@ -245,7 +245,7 @@ country_event = {
 				create_starbase = {
 					size = "starbase_starport"
 					module = "shipyard"
-					module = "trading_hub"
+					module = "shipyard"
 					building = "crew_quarters"
 					owner = root
 				}
@@ -284,27 +284,10 @@ country_event = {
 					limit = { 
 						event_target:previous_home_planet = {
 							has_planet_flag = planet_earth
-							NOR = { 
-								root = { has_origin = origin_shattered_ring }
-								root = { has_origin = origin_remnants }
-							}
+							has_origin = origin_star_cluster
 						}
 					}
-					generate_earth_deposits_and_blockers = yes
-				}
-				else_if = {
-					limit = {
-						event_target:previous_home_planet = {
-							OR = {
-								NOT = { has_planet_flag = planet_earth }
-								root = { has_origin = origin_remnants }
-							}
-							NOT = { 
-								root = { has_origin = origin_shattered_ring }
-							}
-						}
-					}
-					generate_start_deposits_and_blockers = yes
+					generate_earth_deposits_and_blockers = yes # guardare phi
 				}
 				generate_start_buildings_and_districts = yes
 				root = {
@@ -345,112 +328,112 @@ country_event = {
 		every_owned_pop_species = {
 			set_species_homeworld = event_target:new_home_planet
 		}
-		event_target:isolated_home_system_init_04 = {
-			random_system_planet = {
-				limit = {
-					has_planet_flag = isolated_home_planet
-				}
-				if = {
-					limit = {
-						owner = {
-							has_origin = origin_tree_of_life
-						}
-					}
-					owner = {
-						capital_scope = {
-							add_deposit = d_tree_of_life_home
-						}
-					}
-				}
-				if = {
-					limit = {
-						owner = {
-							has_origin = origin_lithoid
-						}
-					}
-					owner = {
-						capital_scope = {
-							add_deposit = d_lithoid_crater
-							add_deposit = d_buried_lithoids
-							add_deposit = d_buried_lithoids
-							add_deposit = d_buried_lithoids
-							add_deposit = d_buried_lithoids
-							add_modifier = { modifier = lithoid_crater }
-						}
-					}
-				}
-				if = {
-					limit = {
-						owner = {
-							has_origin = origin_lost_colony
-						}
-					}
-					owner = {
-						capital_scope = {
-							add_modifier = { modifier = colonial_spirit_mod }
-						}
-					}
-				}
-				if = {
-					limit = {
-						owner = {
-							has_origin = origin_default
-						}
-					}
-					owner = {
-						capital_scope = {
-							add_modifier = { modifier = prosp_uni_mod }
-						}
-					}
-				}
-				if = {
-					limit = {
-						owner = {
-							has_origin = origin_machine
-						}
-					}
-					owner = {
-						capital_scope = {
-							add_deposit = d_machine_minerals
-							solar_system = {
-								every_system_planet = {
-									limit = {
-										colonizeable_planet = no
-										is_star = no
-									}
-									clear_deposits = yes
-								}
-								every_system_planet = {
-									limit = {
-										is_asteroid = yes
-									}
-									remove_planet = yes
-								}
-								every_system_planet = {
-									limit = {
-										colonizeable_planet = no
-										is_star = no
-										is_asteroid = no
-										NOT = { is_planet_class = pc_gas_giant }
-									}
-									change_pc = pc_broken
-								}
-								every_system_planet = {
-									limit = {
-										colonizeable_planet = no
-										is_star = no
-										is_planet_class = pc_gas_giant
-									}
-									change_pc = pc_molten
-									change_planet_size = -25
-									add_modifier = { modifier = chthonian_planet }
-								}
-							}
-						}
-					}
-				}
-			}
-		}
+		#event_target:isolated_home_system_init_04 = {
+			# random_system_planet = {
+			# 	limit = {
+			# 		has_planet_flag = isolated_home_planet
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			owner = {
+			# 				has_origin = origin_tree_of_life
+			# 			}
+			# 		}
+			# 		owner = {
+			# 			capital_scope = {
+			# 				add_deposit = d_tree_of_life_home
+			# 			}
+			# 		}
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			owner = {
+			# 				has_origin = origin_lithoid
+			# 			}
+			# 		}
+			# 		owner = {
+			# 			capital_scope = {
+			# 				add_deposit = d_lithoid_crater
+			# 				add_deposit = d_buried_lithoids
+			# 				add_deposit = d_buried_lithoids
+			# 				add_deposit = d_buried_lithoids
+			# 				add_deposit = d_buried_lithoids
+			# 				add_modifier = { modifier = lithoid_crater }
+			# 			}
+			# 		}
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			owner = {
+			# 				has_origin = origin_lost_colony
+			# 			}
+			# 		}
+			# 		owner = {
+			# 			capital_scope = {
+			# 				add_modifier = { modifier = colonial_spirit_mod }
+			# 			}
+			# 		}
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			owner = {
+			# 				has_origin = origin_default
+			# 			}
+			# 		}
+			# 		owner = {
+			# 			capital_scope = {
+			# 				add_modifier = { modifier = prosp_uni_mod }
+			# 			}
+			# 		}
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			owner = {
+			# 				has_origin = origin_machine
+			# 			}
+			# 		}
+			# 		owner = {
+			# 			capital_scope = {
+			# 				add_deposit = d_machine_minerals
+			# 				solar_system = {
+			# 					every_system_planet = {
+			# 						limit = {
+			# 							colonizeable_planet = no
+			# 							is_star = no
+			# 						}
+			# 						clear_deposits = yes
+			# 					}
+			# 					every_system_planet = {
+			# 						limit = {
+			# 							is_asteroid = yes
+			# 						}
+			# 						remove_planet = yes
+			# 					}
+			# 					every_system_planet = {
+			# 						limit = {
+			# 							colonizeable_planet = no
+			# 							is_star = no
+			# 							is_asteroid = no
+			# 							NOT = { is_planet_class = pc_gas_giant }
+			# 						}
+			# 						change_pc = pc_broken
+			# 					}
+			# 					every_system_planet = {
+			# 						limit = {
+			# 							colonizeable_planet = no
+			# 							is_star = no
+			# 							is_planet_class = pc_gas_giant
+			# 						}
+			# 						change_pc = pc_molten
+			# 						change_planet_size = -25
+			# 						add_modifier = { modifier = chthonian_planet }
+			# 					}
+			# 				}
+			# 			}
+			# 		}
+			# 	}
+			# }
+		#}
 		create_fleet = {
 			effect = {
 				set_owner = root
@@ -587,91 +570,91 @@ country_event = {
 		}
 
 		#Origins.
-		if = {
-			limit = { has_origin = origin_scion }
-			country_event = { id = origin.5 }
-		}
-		#Common Ground/Hegemon setup here to prevent bugs.
-		if = {
-			limit = { 
-				OR = {
-					has_origin = origin_common_ground
-					has_origin = origin_hegemon
-				}
-			}
-			every_country = {
-				limit = {
-					NOT = { is_same_value = root }
-					is_country_type = default
-					has_communications = root
-				}
-				every_owned_planet = {
-					every_owned_pop = {
-						kill_pop = yes
-					}
-					remove_all_buildings = yes
-					remove_all_districts = yes
-					destroy_colony = yes
-				}
-				every_owned_fleet = { delete_fleet = this }
-				destroy_country = yes
-			}
-			country_event = { id = origin.55 days = 1 }
-		}
-		if = {
-			limit = { has_origin = origin_doomsday }
-			country_event = { id = origin.60 }
-		}
-		if = {
-			limit = { has_origin = origin_galactic_doorstep }
-			country_event = { id = origin.1001 }
-		}
-		if = {
-			limit = { has_origin = origin_shoulders_of_giants }
-			country_event = { id = origin.1199 }
-		}
+		# if = {
+		# 	limit = { has_origin = origin_scion }
+		# 	country_event = { id = origin.5 }
+		# }
+		# #Common Ground/Hegemon setup here to prevent bugs.
+		# if = {
+		# 	limit = { 
+		# 		OR = {
+		# 			has_origin = origin_common_ground
+		# 			has_origin = origin_hegemon
+		# 		}
+		# 	}
+		# 	every_country = {
+		# 		limit = {
+		# 			NOT = { is_same_value = root }
+		# 			is_country_type = default
+		# 			has_communications = root
+		# 		}
+		# 		every_owned_planet = {
+		# 			every_owned_pop = {
+		# 				kill_pop = yes
+		# 			}
+		# 			remove_all_buildings = yes
+		# 			remove_all_districts = yes
+		# 			destroy_colony = yes
+		# 		}
+		# 		every_owned_fleet = { delete_fleet = this }
+		# 		destroy_country = yes
+		# 	}
+		# 	country_event = { id = origin.55 days = 1 }
+		# }
+		# if = {
+		# 	limit = { has_origin = origin_doomsday }
+		# 	country_event = { id = origin.60 }
+		# }
+		# if = {
+		# 	limit = { has_origin = origin_star_cluster }
+		# 	country_event = { id = origin.1001 }
+		# }
+		# if = {
+		# 	limit = { has_origin = origin_shoulders_of_giants }
+		# 	country_event = { id = origin.1199 }
+		# }
 				
 		#Compatible with Nanite Machines & Distant Stars Overhaul.
-		if = {
-			limit = {
-				has_global_flag = distar_overhaul_mod_active
-				OR = {
-					has_origin = civic_harvester_nanites
-					has_origin = civic_gateway_pursuer
-					has_origin = civic_gateway_worshiper
-				}
-			}
-			country_event = { id = bio_harvest.3 }
-			every_system = {
-				limit = {
-					has_star_flag = isolated_home_system_gate
-				}
-				if = {
-					limit = {
-						has_star_flag = lgate
-					}
-					remove_star_flag = lgate
-					random_system_megastructure = {
-						limit = {
-							is_megastructure_type = lgate_base
-						}
-						remove_megastructure = this
-					}
-				}
-				every_system_planet = {
-					limit = {
-						OR = {
-							is_planet_class = pc_shattered
-							is_planet_class = pc_gray_goo
-						}
-					}
-					remove_planet = yes
-				}
-				every_system_ambient_object = {
-					destroy_ambient_object = this
-				}
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		has_global_flag = distar_overhaul_mod_active
+		# 		OR = {
+		# 			has_origin = civic_harvester_nanites
+		# 			has_origin = civic_gateway_pursuer
+		# 			has_origin = civic_gateway_worshiper
+		# 		}
+		# 	}
+		# 	country_event = { id = bio_harvest.3 }
+		# 	every_system = {
+		# 		limit = {
+		# 			has_star_flag = isolated_home_system_gate
+		# 		}
+		# 		if = {
+		# 			limit = {
+		# 				has_star_flag = lgate
+		# 			}
+		# 			remove_star_flag = lgate
+		# 			random_system_megastructure = {
+		# 				limit = {
+		# 					is_megastructure_type = lgate_base
+		# 				}
+		# 				remove_megastructure = this
+		# 			}
+		# 		}
+		# 		every_system_planet = {
+		# 			limit = {
+		# 				OR = {
+		# 					is_planet_class = pc_shattered
+		# 					is_planet_class = pc_gray_goo
+		# 				}
+		# 			}
+		# 			remove_planet = yes
+		# 		}
+		# 		every_system_ambient_object = {
+		# 			destroy_ambient_object = this
+		# 		}
+		# 	}
+		# }
 		
 	}
 }

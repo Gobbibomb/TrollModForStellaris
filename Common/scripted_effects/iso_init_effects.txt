@@ -7,10 +7,7 @@ change_starting_planet_class_normal = {
 			if = {
 				limit = {
 					root = {
-						NOR = {
-							has_origin = origin_shattered_ring_isolated
-							has_origin = origin_void_dwellers_isolated
-						}
+						has_origin = origin_star_cluster
 					}
 				}
 				change_pc = $PLANET_CLASS$
@@ -63,10 +60,7 @@ change_starting_planet_class_special = {
 			if = {
 				limit = {
 					root = {
-						NOR = {
-							has_origin = origin_shattered_ring_isolated
-							has_origin = origin_void_dwellers_isolated
-						}
+						has_origin = origin_star_cluster
 					}
 				}
 				change_pc = $PLANET_CLASS$
