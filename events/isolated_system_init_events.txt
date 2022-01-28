@@ -1545,7 +1545,7 @@ event = {
 		}
 		random_system = {
 			limit = {
-				iso_init_unflaged = yes			
+				#iso_init_unflaged = yes			
 				has_natural_wormhole = no
 			}
 			event_target:isolated_home_system_init_01 = {

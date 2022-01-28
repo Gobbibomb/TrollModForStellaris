@@ -2,105 +2,6 @@
 @ag_ancient_stargate_distance = 35
 @ag_ancient_stargate_angle = 275
 
-isolated_home_system_initializer = {
-	class = "sc_black_hole"
-	
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 128
-	}
-	
-	flags = { empire_home_system isolated_home_system_gate isolated_home_system_origin }
-	
-	usage = custom_empire
-	max_instances = 1
-	
-	planet = {
-		class = "pc_black_hole"
-		orbit_distance = 0
-		orbit_angle = 0
-		size = 30
-		has_ring = no
-	}
-	
-	change_orbit = 128
-	
-	planet = {
-		count = { min = 2 max = 5 }
-		class = "pc_asteroid"
-		orbit_distance = 0
-		orbit_angle = random
-		size = 5
-		has_ring = no
-	}
-	
-	planet = {
-		home_planet = yes
-		
-		class = ideal_planet_class
-		orbit_distance = 35
-		orbit_angle = random
-		size = { min = 16 max = 20 }
-		has_ring = no
-		
-		deposit_blockers = none
-		modifiers = none
-
-		init_effect = {
-			prevent_anomaly = yes
-			generate_empire_home_planet = yes
-		}
-	}
-
-	init_effect = {
-
-		random_list = {
-			10 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_1_spawned
-				}
-				iso_init_create_cluster_style_1 = { home_system = isolated_home_system_init_04 }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_2_spawned
-				}
-				iso_init_create_cluster_style_2 = { home_system = isolated_home_system_init_04 }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_3_spawned
-				}
-				iso_init_create_cluster_style_3 = { home_system = isolated_home_system_init_04 }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_4_spawned
-				}
-				iso_init_create_cluster_style_4 = { home_system = isolated_home_system_init_04 }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_5_spawned
-				}
-				iso_init_create_cluster_style_5 = { home_system = isolated_home_system_init_04 }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_6_spawned
-				}
-				iso_init_create_cluster_style_6 = { home_system = isolated_home_system_init_04 }
-			}
-		}
-	}
-}
-
 start_cluster_initializer = {
 	class = "sc_black_hole"
 	
@@ -197,203 +98,127 @@ start_cluster_initializer = {
 				iso_init_create_cluster_style_6 = { home_system = isolated_home_system_init_04 }
 			}
 		}
-	}
-}
-isolated_home_system_initializer_ringworld = {
-	class = "sc_black_hole"
-	
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 128
-	}
-	
-	flags = { empire_home_system isolated_home_system_gate isolated_home_system_origin }
-	
-	usage = origin
-	max_instances = 1
-	
-	planet = {
-		class = "pc_black_hole"
-		orbit_distance = 0
-		orbit_angle = 0
-		size = 30
-		has_ring = no
-	}
-	
-	change_orbit = 128
-	
-	planet = {
-		count = { min = 2 max = 5 }
-		class = "pc_asteroid"
-		orbit_distance = 0
-		orbit_angle = random
-		size = 5
-		has_ring = no
-	}
-	
-	planet = {
-		home_planet = yes
-		
-		class = pc_ringworld_habitable
-		orbit_distance = 35
-		orbit_angle = random
-		size = { min = 16 max = 20 }
-		has_ring = no
-		
-		deposit_blockers = none
-		modifiers = none
-
-		init_effect = {
-			prevent_anomaly = yes
-			generate_empire_home_planet = yes
+		set_spawn_system_batch = begin
+		random_system = {
+		limit = { 
+			has_star_flag = isolated_home_system_init_01
+			has_natural_wormhole = no
 		}
-	}
-
-	init_effect = {
-
-		random_list = {
-			10 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_1_spawned
-				}
-				iso_init_create_cluster_style_1 = { home_system = isolated_home_system_init_04_ringworld }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_2_spawned
-				}
-				iso_init_create_cluster_style_2 = { home_system = isolated_home_system_init_04_ringworld }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_3_spawned
-				}
-				iso_init_create_cluster_style_3 = { home_system = isolated_home_system_init_04_ringworld }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_4_spawned
-				}
-				iso_init_create_cluster_style_4 = { home_system = isolated_home_system_init_04_ringworld }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_5_spawned
-				}
-				iso_init_create_cluster_style_5 = { home_system = isolated_home_system_init_04_ringworld }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_6_spawned
-				}
-				iso_init_create_cluster_style_6 = { home_system = isolated_home_system_init_04_ringworld }
-			}
+		save_event_target_as = isolated_home_system_init_01
 		}
-	}
-}
-
-isolated_home_system_initializer_habitat = {
-	class = "sc_black_hole"
-	
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 128
-	}
-	
-	flags = { empire_home_system isolated_home_system_gate isolated_home_system_origin }
-	
-	usage = origin
-	max_instances = 1
-	
-	planet = {
-		class = "pc_black_hole"
-		orbit_distance = 0
-		orbit_angle = 0
-		size = 30
-		has_ring = no
-	}
-	
-	change_orbit = 128
-	
-	planet = {
-		count = { min = 2 max = 5 }
-		class = "pc_asteroid"
-		orbit_distance = 0
-		orbit_angle = random
-		size = 5
-		has_ring = no
-	}
-	
-	planet = {
-		home_planet = yes
+		random_system = {
+			limit = {
+				has_star_flag = isolated_home_system_origin
+				has_natural_wormhole = no				
+			}
+			event_target:isolated_home_system_init_01 = {
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 360
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+			link_wormholes = event_target:isolated_home_system_init_01
+		}
+		#NON FUNZIONA
+		random_system = {
+			limit = { 
+				has_star_flag = isolated_home_system_init_02
+				has_natural_wormhole = no
+			}
+			save_event_target_as = isolated_home_system_init_02
+		}
+		random_system = {
+			limit = {
+				AND = {
+					NOR = {
+					has_star_flag = isolated_home_system_init_style_1_flaged
+					has_star_flag = isolated_home_system_init_style_2_flaged
+					has_star_flag = isolated_home_system_init_style_3_flaged
+					has_star_flag = isolated_home_system_init_style_4_flaged
+					has_star_flag = isolated_home_system_init_style_5_flaged
+					has_star_flag = isolated_home_system_init_style_6_flaged
+					has_star_flag = isolated_home_system_init_style_7_flaged
+					has_star_flag = isolated_home_system_init_style_8_flaged
+					}
+					has_natural_wormhole = no				
+				}
+			}
+			save_event_target_as = wormhole_cluster_out_01
+		}
+			event_target:isolated_home_system_init_02 = {
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 360
+				}
+			}
+			event_target:wormhole_cluster_out_01 = {
+				spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+				}
+				link_wormholes = event_target:isolated_home_system_init_02
+			}
+			
+			event_target:isolated_home_system_init_01 = {
+				add_hyperlane = {
+					from = event_target:isolated_home_system_init_01
+					to = event_target:isolated_home_system_init_02
+				}
+				add_hyperlane = {
+					from = event_target:isolated_home_system_init_01
+					to = event_target:isolated_home_system_init_03
+				}
+			}
+			event_target:isolated_home_system_init_02 = {
+				add_hyperlane = {
+					from = event_target:isolated_home_system_init_02
+					to = event_target:isolated_home_system_init_03
+				}
+				add_hyperlane = {
+					from = event_target:isolated_home_system_init_02
+					to = event_target:isolated_home_system_init_05
+				}
+				add_hyperlane = {
+					from = event_target:isolated_home_system_init_02
+					to = event_target:isolated_home_system_init_06
+				}
+			}
+			event_target:isolated_home_system_init_03 = {
+				add_hyperlane = {
+					from = event_target:isolated_home_system_init_03
+					to = event_target:isolated_home_system_init_05
+				}
+			}
+			event_target:isolated_home_system_init_05 = {
+				add_hyperlane = {
+					from = event_target:isolated_home_system_init_05
+					to = event_target:isolated_home_system_init_04
+				}
+				add_hyperlane = {
+					from = event_target:isolated_home_system_init_05
+					to = event_target:isolated_home_system_init_06
+				}
+			}
+			event_target:isolated_home_system_init_07 = {
+				add_hyperlane = {
+					from = event_target:isolated_home_system_init_07
+					to = event_target:isolated_home_system_init_04
+				}
+				add_hyperlane = {
+					from = event_target:isolated_home_system_init_07
+					to = event_target:isolated_home_system_init_06
+				}
+			}
 		
-		class = pc_habitat
-		orbit_distance = 35
-		orbit_angle = random
-		size = { min = 16 max = 20 }
-		has_ring = no
-		
-		deposit_blockers = none
-		modifiers = none
-
-		init_effect = {
-			prevent_anomaly = yes
-			generate_empire_home_planet = yes
-		}
-	}
-
-	init_effect = {
-
-		random_list = {
-			10 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_1_spawned
-				}
-				iso_init_create_cluster_style_1 = { home_system = isolated_home_system_init_04_habitat }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_2_spawned
-				}
-				iso_init_create_cluster_style_2 = { home_system = isolated_home_system_init_04_habitat }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_3_spawned
-				}
-				iso_init_create_cluster_style_3 = { home_system = isolated_home_system_init_04_habitat }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_4_spawned
-				}
-				iso_init_create_cluster_style_4 = { home_system = isolated_home_system_init_04_habitat }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_5_spawned
-				}
-				iso_init_create_cluster_style_5 = { home_system = isolated_home_system_init_04_habitat }
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					has_global_flag = isolated_cluster_style_6_spawned
-				}
-				iso_init_create_cluster_style_6 = { home_system = isolated_home_system_init_04_habitat }
-			}
-		}
+		set_spawn_system_batch = end
 	}
 }
 
