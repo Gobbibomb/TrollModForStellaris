@@ -1,0 +1,174 @@
+trait_Adept_satanist = {
+	cost = 0
+	potential_crossbreeding_chance = 0.25
+	icon = "gfx/interface/icons/traits/trait_psionic_species.dds"
+
+	opposites = { "trait_latent_psionic" "trait_psionic" }
+
+	initial = no
+	randomized = no
+	modification = no
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		pop_growth_speed = -0.1
+	}
+}
+trait_satanist = {
+	cost = 0
+	potential_crossbreeding_chance = 0.25
+	icon = "gfx/interface/icons/traits/trait_psionic_species.dds"
+
+	opposites = { "trait_latent_psionic" "trait_psionic" }
+
+	initial = no
+	randomized = no
+	modification = no
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.15
+		pop_growth_speed = -0.3
+	}
+}
+trait_master_satanist = {
+	cost = 0
+	potential_crossbreeding_chance = 0.25
+	icon = "gfx/interface/icons/traits/trait_psionic_species.dds"
+
+	opposites = { "trait_latent_psionic" "trait_psionic" }
+
+	initial = no
+	randomized = no
+	modification = no
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	modifier = {
+        planet_jobs_unity_produces_mult = 0.15
+		planet_jobs_produces_mult = 0.15
+		pop_growth_speed = -0.3
+        army_damage_mult = 2
+	}
+}
+trait_ritual_of_sex = {
+	cost = 3
+	modification = no
+	opposites = { "trait_venerable" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	triggered_pop_modifier = { #won't show in trait tooltips, use custom_tooltip/custom_tooltip_with_modifiers
+		potential = {
+			exists = planet
+			planet = { has_planet_modifier = "pm_supergrowth" }
+		}
+		pop_growth_speed = 3.5
+	 	planet_jobs_produces_mult = -0.3
+	}
+	modifier = {
+		pop_growth_speed = -1
+		planet_jobs_produces_mult = +0.05
+	}
+}
+trait_idiocracy= {
+	cost = 3
+	initial yes
+	randomized = no
+	modification = no
+	opposites = { "trait_venerable" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		pop_growth_speed = 1
+		species_leader_exp_gain = -10
+	}
+}
+trait_genius = {
+	cost = 3
+	opposites = { "trait_intelligent" "trait_nerve_stapled" "trait_erudite" "trait_enigmatic_intelligence_poor" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.30
+		planet_jobs_physics_research_produces_mult = 0.30
+		planet_jobs_society_research_produces_mult = 0.30
+		leader_age = -35
+	}
+}
+trait_plagued = { 
+	cost = 3
+	modification = no
+	potential_crossbreeding_chance = 0.50
+	allowed_archetypes = { BIOLOGICAL }
+	
+	modifier = {
+		pop_growth_speed = 0.50
+		country_society_research_produces_mult = 0.15
+		country_physics_research_produces_mult = -0.05
+		country_engineering_research_produces_mult = -0.05
+		leader_age = 5
+		pop_happiness = -0.15
+		country_trust_cap_add = -50
+		country_trust_growth = -0.50
+	}
+	
+}
+trait_gesu = {
+	cost = 3
+	modification = no
+	potential_crossbreeding_chance = 0.50
+	
+	modification = yes
+
+	allowed_archetypes = { BIOLOGICAL }
+	
+	modifier = {
+		planet_jobs_unity_produces_mult = 2
+		planet_jobs_food_produces_mult = 1
+		planet_jobs_specialist_produces_mult = -0.2
+		planet_jobs_worker_produces_mult = -0.2
+		planet_jobs_slave_produces_mult = -0.5
+	}
+	
+}
+trait_corrotti = { 
+	cost = -1
+	potential_crossbreeding_chance = 0.50
+	
+	modification = yes
+
+	allowed_archetypes = { BIOLOGICAL }
+	
+	modifier = {
+		planet_buildings_upkeep_mult = 1
+		planet_buildings_cost_mult = 0.1
+	}
+	
+}
+trait_ork = { 
+	cost = 0
+	initial = 0
+	potential_crossbreeding_chance = 0.50
+	
+	modification = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	
+	modifier = {
+		army_damage_mult = 1
+	}
+	
+}
+trait_mage = { 
+	cost = 0
+	potential_crossbreeding_chance = 0.50
+	initial = 0
+	modification = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	
+	modifier = {
+		army_damage_mult = 1
+	}
+	
+}

@@ -1,6 +1,7 @@
 
 supergrowth = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_assist_research.dds"
-	pop_growth_speed = 1.5
-	planet_jobs_produces_mult = -0.15
+	# pop_growth_speed = 1.5
+	# planet_jobs_produces_mult = -0.15
+	set_planet_flag = supergrowth
 }

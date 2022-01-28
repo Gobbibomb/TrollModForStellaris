@@ -6,6 +6,11 @@ country_event = {
 	desc = "growth.1.desc"
 	is_triggered_only = yes
 	hide_window = no
+	trigger = {
+		any_owned_pop = {
+			pop_has_trait = trait_ritual_of_sex
+		}
+	}
 	immediate = {
 		
 			# if = {
@@ -19,7 +24,7 @@ country_event = {
 					}
 				}
 				add_modifier = {
-					modifier = "supergrowth"
+					modifier = "pm_supergrowth"
 					days = 90
 				}
 			}
