@@ -148,7 +148,7 @@ trait_corrotti = {
 }
 trait_ork = { 
 	cost = 0
-	initial = 0
+	initial = no
 	potential_crossbreeding_chance = 0.50
 	
 	modification = no
@@ -163,7 +163,7 @@ trait_ork = {
 trait_mage = { 
 	cost = 0
 	potential_crossbreeding_chance = 0.50
-	initial = 0
+	initial = no
 	modification = no
 	randomized = no
 	allowed_archetypes = { BIOLOGICAL }
