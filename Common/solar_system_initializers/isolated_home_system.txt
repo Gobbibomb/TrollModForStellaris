@@ -54,9 +54,16 @@ start_cluster_initializer = {
 	}
 
 	init_effect = {
-
+		#debug
+			# iso_init_create_cluster_style_1 = { home_system = isolated_home_system_init_04 }
+			# iso_init_create_cluster_style_2 = { home_system = isolated_home_system_init_04 }
+			# iso_init_create_cluster_style_3 = { home_system = isolated_home_system_init_04 }
+			# iso_init_create_cluster_style_4 = { home_system = isolated_home_system_init_04 }
+			# iso_init_create_cluster_style_5 = { home_system = isolated_home_system_init_04 }
+			# iso_init_create_cluster_style_6 = { home_system = isolated_home_system_init_04 }
+		#---
 		random_list = {
-			10 = {
+			1 = {
 				modifier = {
 					factor = 0
 					has_global_flag = isolated_cluster_style_1_spawned
@@ -103,11 +110,9 @@ start_cluster_initializer = {
 		no_scope = {
 			spawn_system = {
 				min_distance >= 90
-				max_distance <= 300
-				min_orientation_angle = 137
-				max_orientation_angle = 139
+				max_distance <= 250
 				hyperlane = yes
-				initializer = basic_init_01 
+				initializer = System_Wormhole_Shyfer #basic_init_01 
 				#name = "sto cazzo" #initializer = "sto_cazzo"
 				#set_star_flag = Wormhole_Shyfer
 				#set_star_name = "stocazzo"
@@ -146,8 +151,12 @@ start_cluster_initializer = {
 		#tentativo 5
 		random_system = {
 			limit = { 
-				iso_init_unflaged = yes
-				has_natural_wormhole = no
+				has_star_flag = Wormhole_Shyfer
+				# AND = {
+				# 	iso_init_unflaged = yes
+				# 	NOT = { has_star_flag = jump }
+				# 	has_natural_wormhole = no
+				# }
 			}
 			spawn_natural_wormhole = {
 				bypass_type = wormhole
@@ -223,53 +232,33 @@ start_cluster_initializer = {
 		set_spawn_system_batch = end
 	}
 }
-sto_cazzo = {
-	class = "sc_black_hole"
-	name = "stocazzo"
+System_Wormhole_Shyfer = {
+	class = "rl_standard_stars"
 	flags = { Wormhole_Shyfer  }
-	
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 135
-	}
-	
+
 	planet = {
-		class = "pc_black_hole"
+		count = 1
+		class = star
 		orbit_distance = 0
-		orbit_angle = 0
-		size = 30
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
-	
+
+	change_orbit = 45
+
 	planet = {
-		class = "pc_broken"
-		orbit_distance = 75
-		orbit_angle = random
-		size = 16
-		has_ring = no
-		
-		init_effect = {
-			prevent_anomaly = yes
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
 		}
-	}
-	
-	change_orbit = 60
-	
-	planet = {
-		count = { min = 2 max = 5 }
-		class = "pc_asteroid"
-		orbit_distance = 0
-		orbit_angle = random
-		size = 5
-		has_ring = no
-	}
-	init_effect = {
-#		spawn_megastructure = {
-#			type = ag_ancient_gate_base_alt
-#			orbit_distance = @ag_ancient_stargate_distance
-#			orbit_angle = @ag_ancient_stargate_angle
-#			location = solar_system
-#		}
 	}
 }
 isolated_home_system_init_01 = {

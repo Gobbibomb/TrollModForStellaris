@@ -1,15 +1,14 @@
 #mettere bonus 30 tutte le ricerche
 origin_star_cluster = {
 	is_origin = yes
-	icon = "gfx/interface/icons/origins/origins_shattered_ring.dds"
-	picture = GFX_origin_shattered_ring # da cambiare
+	icon = "gfx/interface/icons/origins/origin_star_cluster.dds"
+	picture = "gfx/event_pictures/origins_origin_star_cluster.dds"
 
 	#starting_colony = pc_ringworld_habitable
 	initializers = { start_cluster_initializer }
 	max_once_global = yes
 	
 	possible = {
-		
 			civics = {  
 				OR = { 
 					value = civic_fanatic_purifiers 
