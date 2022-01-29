@@ -74,14 +74,17 @@ trait_ritual_of_sex = {
 }
 trait_idiocracy= {
 	cost = 3
-	initial yes
+	initial = yes
 	randomized = no
 	modification = no
-	opposites = { "trait_venerable" }
+	opposites = { "trait_venerable" "trait_genius" "trait_intelligent" "trait_nerve_stapled" "trait_erudite" "trait_enigmatic_intelligence_poor" "trait_plagued" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		pop_growth_speed = 1
 		species_leader_exp_gain = -10
+		planet_jobs_engineering_research_produces_mult = -0.30
+		planet_jobs_physics_research_produces_mult = -0.30
+		planet_jobs_society_research_produces_mult = -0.30
 	}
 }
 trait_genius = {
@@ -100,7 +103,7 @@ trait_plagued = {
 	modification = no
 	potential_crossbreeding_chance = 0.50
 	allowed_archetypes = { BIOLOGICAL }
-	
+	opposites = { "trait_idiocracy" }
 	modifier = {
 		pop_growth_speed = 0.50
 		country_society_research_produces_mult = 0.15
@@ -117,8 +120,6 @@ trait_gesu = {
 	cost = 3
 	modification = no
 	potential_crossbreeding_chance = 0.50
-	
-	modification = yes
 
 	allowed_archetypes = { BIOLOGICAL }
 	
