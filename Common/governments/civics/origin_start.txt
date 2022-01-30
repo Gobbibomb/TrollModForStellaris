@@ -2,7 +2,7 @@
 origin_star_cluster = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origin_star_cluster.dds"
-	picture = "gfx/event_pictures/origins_origin_star_cluster.dds"
+	picture = GFX_origin_star_cluster
 
 	#starting_colony = pc_ringworld_habitable
 	initializers = { start_cluster_initializer }

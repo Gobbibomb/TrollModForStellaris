@@ -581,7 +581,7 @@ event = {
 	id = iso_init.3
 	hide_window = yes
 	is_triggered_only = yes
-	#tentativo 6
+	#tentativo 6 non funziona forse perchè lo star flag è slavato su star.flags dell'impero
 	immediate = {
 		random_system = {
 			limit = { 
