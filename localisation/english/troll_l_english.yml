@@ -16,6 +16,10 @@ growth.1.desc: "Finalmente avremmo un trimestre di crescita dei rapporti sociali
 #Modifiers
 pm_supergrowth: "Stagione d'accoppiamento"
 pm_supergrowth_desc: "Questo pianeta ha iniziato la stagione dell'accoppiamento"
+pm_supergrowth:0 "Stagione d'accoppiamento"
+pm_supergrowth_desc:0 "Questo pianeta ha iniziato la stagione dell'accoppiamento"
+supergrowth: "Stagione d'accoppiamento"
+supergrowth_desc: "Questo pianeta ha iniziato la stagione dell'accoppiamento"
 #Traditions
 #Ascension Perks
 #Policies

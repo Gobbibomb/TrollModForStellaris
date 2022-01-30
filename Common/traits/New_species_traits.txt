@@ -62,7 +62,7 @@ trait_ritual_of_sex = {
 	triggered_pop_modifier = { #won't show in trait tooltips, use custom_tooltip/custom_tooltip_with_modifiers
 		potential = {
 			exists = planet
-			planet = { has_planet_modifier = "pm_supergrowth" }
+			planet = { has_modifier = "pm_supergrowth" }
 		}
 		pop_growth_speed = 3.5
 	 	planet_jobs_produces_mult = -0.3
@@ -148,7 +148,7 @@ trait_corrotti = {
 }
 trait_ork = { 
 	cost = 0
-	initial = 0
+	initial = no
 	potential_crossbreeding_chance = 0.50
 	
 	modification = no
@@ -163,7 +163,7 @@ trait_ork = {
 trait_mage = { 
 	cost = 0
 	potential_crossbreeding_chance = 0.50
-	initial = 0
+	initial = no
 	modification = no
 	randomized = no
 	allowed_archetypes = { BIOLOGICAL }
