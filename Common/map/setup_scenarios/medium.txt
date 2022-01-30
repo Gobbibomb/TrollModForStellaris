@@ -25,7 +25,7 @@ setup_scenario = {
 	cluster_radius = 120
 	cluster_distance_from_core = 250
 	
-	max_hyperlane_distance = 500
+	max_hyperlane_distance = 50
 
 	home_system_partitions = {
 		max_systems = 15
