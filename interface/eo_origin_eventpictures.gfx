@@ -1,0 +1,13 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_origin_star_cluster"
+		texturefile = "gfx/event_pictures/origins/origin_star_cluster.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_ai_uprising"
+		texturefile = "gfx/event_pictures/origins/origin_ai_uprising.dds"
+		alwaystransparent = yes
+	}
+}

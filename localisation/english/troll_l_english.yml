@@ -41,6 +41,22 @@ trait_ritual_of_sex_desc: "Per 3 mesi all'anno si ha +150% growth speed -15% pop
 trait_super_growth: "Rituali di accoppiamento"
 trait_super_growth_desc: "Rituali di accoppiamento incominciati"
 
+leader_trait_ruler_engineer: "Ingegnere"
+leader_trait_ruler_physics: "Fisico"
+leader_trait_ruler_society: "Tradizionale"
+leader_trait_ruler_engineer_desc: "Dirotta investimenti a una lobby che l'ha eletto"
+leader_trait_ruler_physics_desc: "Dirotta investimenti a una lobby che l'ha eletto"
+leader_trait_ruler_society_desc: "Dirotta investimenti a una lobby che l'ha eletto"
+leader_trait_governor_society: "Tradizionale"
+leader_trait_governor_engineering: "Fisico"
+leader_trait_governor_physics: "Ingegnere"
+leader_trait_big_weapon: "Appassionato di grandi armi"
+TRAIT_VENERABLE_EFFECT:0 "Età leader +45 anni\n Resource from ruler £job£ §G+100%§!\n felicità pop = §R-10%§!\n£trade_value£ Trade Value from £job£ merchant: §G+100%§!"
+
+#generals traits
+leader_trait_big_weapon: "Armamento grosso"
+leader_trait_big_weapon_desc: "Questo generale predilige armi di grosso calibro"
+
 civic_big_architecture:0 "Grandi architteture navali"
 civic_big_architecture_desc:3 "Ci piace costruire grandi e potenti navi"
 civic_big_architecture_tootip:0 ""
@@ -49,6 +65,10 @@ Military_Ship_order:0 "Ordinazione navi"
 Military_Ship_order_desc:0 "Compriamo le navi da aziende costrutrici di navi"
 Military_Ship_order_tootip:0 "Permette di costruire navi con energia e consumer goods"
 TORPEDO_Tooltip:0 "+5% velocità subluce"
+
+trait_ritual_of_sex_EFFECT:0 "La popolazione si prepara ad accoppiarsi!!! \nPop Growth Speed §G+350%§!"
+trait_ritual_of_sex_EFFECT2:0 "La popolazione si prepara ad accoppiarsi!! \nPlanet jobs produces §R-30%§!"
+trait_ritual_of_sex_EFFECT3:0 "La popolazione non pensa ad accopiarsi!!! \n pop jobs produces §G+5%§!"
 #  edict_capacity_subsidies_tooltip:0 "Increases the upkeep of £job_technician£ $job_technician_plural$ by £minerals£§Y0.5§!"
 
 #Civics
@@ -76,3 +96,29 @@ TORPEDO_Tooltip:0 "+5% velocità subluce"
 # Jobs
 #Armies
 #Galactic Council Resolutions
+
+#weapons
+
+POINT_DEFENCE_1R:0 "Sentinel Point-Defense"
+POINT_DEFENCE_1R_DESC:1 "Hull-mounted countermeasures against missiles and strike craft are often essential for larger and slower military vessels."
+POINT_DEFENCE_2R:0 "Barrier Point-Defense"
+POINT_DEFENCE_2R_DESC:1 "Updated prediction algorithms improves tracking and point-defense efficiency."
+POINT_DEFENCE_3R:0 "Guardian Point-Defense"
+POINT_DEFENCE_3R_DESC:1 "A wider range of available ammunition types vastly improves the effective interception rate of incoming threats."
+####################################
+# AI Uprising
+####################################
+origin_ai_uprising:0 "Matrix"
+origin_ai_uprising_desc:0 "Le machcine hanno avuto il soppravento su questa civiltà e per utilizzano gli umani per la velocità di calcolo per tenere calmi gli umani coltivati, immobilizzati fin dalla nascita e nutriti."
+origin_tooltip_ai_uprising_effects:0 "- Start the game with §Y14§! organic £pop£ Pops with the Grid Amalgamated citizenship"
+
+origin_ai_uprising_secondary_species:0 "Organic Species"
+
+#####################################
+# Vat Grown
+#####################################
+origin_tooltip_vat_grown_effects:0 "- Species has the §Y$trait_sterile$§! trait, preventing natural pop growth\n- Gain access to the $building_cloning_facility$ building, providing Organic Pop Assembly"
+trait_sterile:0 "Sterile"
+trait_sterile_desc:0 "§LThis species is incapable of natural reproduction.§!"
+building_cloning_facility:0 "Cloning Facility"
+building_cloning_facility_desc:0 "Vast automated facilites where clones are grown and reared."

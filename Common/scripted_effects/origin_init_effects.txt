@@ -1,0 +1,45 @@
+eo_buildings_and_districts = {
+#####AI Uprising
+	if = {
+		limit = { 
+			owner = { has_origin = origin_ai_uprising }
+		}
+		while = {
+			limit = {
+				num_districts = {
+					type = district_generator
+					value > 2
+				}
+			}
+			remove_district = district_generator
+			add_district = district_farming
+		}
+		owner = { 
+			add_resource = { food = 100 } 
+			add_resource = { consumer_goods = 100 }
+		}
+	}
+}
+eo_pops = {
+	#####Pops for AI Uprising
+	if = {
+		limit = {
+			owner = { has_origin = origin_ai_uprising }
+		}
+		while = {
+			count = 8
+			random_owned_pop = {
+				limit = {
+					is_species_class = MACHINE
+				}
+				kill_pop = yes
+			}
+		}
+		while = {
+			count = 14
+			create_pop = {
+				species = last_created_species
+			}
+		}
+	}
+}

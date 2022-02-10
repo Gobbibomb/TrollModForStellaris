@@ -7,8 +7,7 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_point_defense_1"
 	icon_frame = 1
-
-	prerequisites = { "tech_pd_tracking_1" }
+	prerequisites = { always = no }
 	component_set = "POINT_DEFENCE_1"
 	type = point_defence
 	projectile_gfx = "red_laser_pd"
@@ -34,8 +33,8 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_point_defense_2"
 	icon_frame = 1
-
-	prerequisites = { "tech_pd_tracking_2" }
+	potential = { always = no }
+	rerequisites = { always = no }
 	component_set = "POINT_DEFENCE_2"
 	type = point_defence
 	projectile_gfx = "blue_laser_pd"
@@ -61,8 +60,8 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_point_defense_3"
 	icon_frame = 1
-
-	prerequisites = { "tech_pd_tracking_3" }
+	potential = { always = no }
+	rerequisites = { always = no }
 	component_set = "POINT_DEFENCE_3"
 	type = point_defence
 	projectile_gfx = "white_laser_pd"

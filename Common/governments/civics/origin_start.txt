@@ -1,0 +1,53 @@
+#mettere bonus 30 tutte le ricerche
+origin_star_cluster = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_star_cluster.dds"
+	picture = GFX_origin_star_cluster
+
+	#starting_colony = pc_ringworld_habitable
+	initializers = { start_cluster_initializer }
+	max_once_global = yes
+	
+	possible = {
+			civics = {  
+				OR = { 
+					value = civic_fanatic_purifiers 
+					value = civic_machine_assimilator 
+			 		value = civic_machine_terminator 
+			 		value = civic_hive_devouring_swarm 
+			}
+		}
+	}
+	description = "origin_start_cluster_effect"
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+}
+
+origin_ai_uprising = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_ai_uprising.dds"
+	picture = GFX_origin_ai_uprising
+	max_once_global = yes
+
+	possible = {
+		authority = { value = auth_machine_intelligence }
+		civics = {
+			NOR = {
+				value = civic_machine_terminator
+				value = civic_machine_servitor
+				value = civic_machine_assimilator
+			}
+		}
+	}
+	
+	description = "origin_tooltip_ai_uprising_effects"
+	#flags = { custom_start_screen }
+
+	has_secondary_species = {
+		title = origin_ai_uprising_secondary_species
+	}
+
+	advanced_start = yes
+}

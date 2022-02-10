@@ -57,9 +57,9 @@ building_refinery = {
 		}
 	}
 
-	prerequisites = {
-		"tech_exotic_gases"
-	}
+	#prerequisites = {
+	#	"tech_exotic_gases"
+	#}
 
 	triggered_desc = {
 		trigger = {
@@ -142,9 +142,9 @@ building_chemical_plant = {
 		}
 	}
 
-	prerequisites = {
-		"tech_volatile_motes"
-	}
+	#prerequisites = {
+	#	"tech_volatile_motes"
+	#}
 
 	triggered_desc = {
 		trigger = {
@@ -228,9 +228,9 @@ building_crystal_plant = {
 		}
 	}
 
-	prerequisites = {
-		"tech_rare_crystals"
-	}
+	#prerequisites = {
+	#	"tech_rare_crystals"
+	#}
 
 	triggered_desc = {
 		trigger = {

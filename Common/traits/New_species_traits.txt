@@ -59,17 +59,35 @@ trait_ritual_of_sex = {
 	modification = no
 	opposites = { "trait_venerable" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
-	triggered_pop_modifier = { #won't show in trait tooltips, use custom_tooltip/custom_tooltip_with_modifiers
+	custom_tooltip_with_modifiers = trait_ritual_of_sex_EFFECT
+	triggered_planet_growth_modifier = {
 		potential = {
 			exists = planet
 			planet = { has_modifier = "pm_supergrowth" }
 		}
 		pop_growth_speed = 3.5
-	 	planet_jobs_produces_mult = -0.3
 	}
+	# custom_tooltip_with_modifiers = trait_ritual_of_sex_EFFECT2
+	# triggered_pop_modifier = { #won't show in trait tooltips, use custom_tooltip/custom_tooltip_with_modifiers
+	# 	potential = {
+	# 		exists = planet
+	# 		planet = { has_modifier = "pm_supergrowth" }
+	# 	}
+	# 	modifier = {
+	#  		pop_jobs_produces_mult = -0.3
+	# 	}
+	# }
+	# custom_tooltip_with_modifiers = trait_ritual_of_sex_EFFECT3
+	# triggered_pop_modifier = { #won't show in trait tooltips, use custom_tooltip/custom_tooltip_with_modifiers
+	# 	potential = {
+	# 		exists = planet
+	# 		planet = { NOT = { has_modifier = "pm_supergrowth" } }
+	# 	}
+	# 	planet_jobs_produces_mult = +0.05
+	# }
 	modifier = {
 		pop_growth_speed = -1
-		planet_jobs_produces_mult = +0.05
+		
 	}
 }
 trait_idiocracy= {
@@ -122,7 +140,7 @@ trait_gesu = {
 	potential_crossbreeding_chance = 0.50
 
 	allowed_archetypes = { BIOLOGICAL }
-	
+	opposites = { "trait_slow_breeders"}
 	modifier = {
 		planet_jobs_unity_produces_mult = 2
 		planet_jobs_food_produces_mult = 1
@@ -172,4 +190,19 @@ trait_mage = {
 		army_damage_mult = 1
 	}
 	
+}
+trait_sterile = {
+	cost = 0
+	sorting_priority = 20
+	potential_crossbreeding_chance = 0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	infertile = yes
+	slave_cost = {
+		energy = -100
+	}
+	ai_weight = {
+		weight = 0
+	}
 }

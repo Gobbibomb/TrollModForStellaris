@@ -280,31 +280,9 @@ district_nexus = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost
-			consumer_goods = @cc_city_cost
-		}
-		cost = {
-			trigger = {
-				owner = {
-					OR = {
-						is_hive_empire = yes
-						is_machine_empire = yes
-					}
-				}
-			}
-			minerals = @city_cost
 			energy = @e_city_cost
 		}
 		upkeep = {
-			energy = 1
-			consumer_goods = 0.5
-		}
-		upkeep = {
-			trigger = {
-				owner = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
 			energy = 2
 		}
 	}

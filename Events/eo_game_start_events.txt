@@ -1,0 +1,17 @@
+namespace = eo_game_start
+
+####Give techs
+
+###Planet setup
+# this: capital planet
+# from: founder species
+planet_event = {
+	id = eo_game_start.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		eo_pops = yes
+		eo_buildings_and_districts = yes
+	}
+}

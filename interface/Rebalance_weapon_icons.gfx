@@ -1,0 +1,16 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_ship_part_point_defense_1R"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_point_defense_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_point_defense_2R"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_point_defense_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ship_part_point_defense_3R"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_point_defense_3.dds"
+	}
+}

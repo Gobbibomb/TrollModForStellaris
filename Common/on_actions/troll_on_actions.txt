@@ -8,3 +8,8 @@ on_yearly_pulse_country = {
 		growth.1
 	}
 }
+empire_init_capital_planet = {
+	events = {
+		eo_game_start.2
+	}
+}
