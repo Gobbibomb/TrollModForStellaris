@@ -593,7 +593,7 @@ building_factory_1 = {
 		exists = owner
 		owner = {
 			OR = {
-				country_uses_consumer_goods = yes
+				#country_uses_consumer_goods = yes
 				has_origin = origin_fear_of_the_dark
 			}
 		}
@@ -620,10 +620,7 @@ building_factory_1 = {
 				exists = owner
 				OR = {
 					owner = { 
-						AND = {
-							country_uses_consumer_goods = no
 							NOT = { has_origin = origin_fear_of_the_dark }
-						}
 					}
 					AND = {
 						owner = {
@@ -734,9 +731,6 @@ building_factory_2 = {
 
 	potential = {
 		exists = owner
-		owner = {
-			country_uses_consumer_goods = yes
-		}
 		NOT = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -752,7 +746,6 @@ building_factory_2 = {
 			AND = {
 				exists = owner
 				OR = {
-					owner = { country_uses_consumer_goods = no }
 					AND = {
 						owner = {
 							is_ai = yes
@@ -868,9 +861,6 @@ building_factory_3 = {
 
 	potential = {
 		exists = owner
-		owner = {
-			country_uses_consumer_goods = yes
-		}
 		NOT = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -887,7 +877,6 @@ building_factory_3 = {
 			AND = {
 				exists = owner
 				OR = {
-					owner = { country_uses_consumer_goods = no }
 					AND = {
 						owner = {
 							is_ai = yes

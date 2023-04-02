@@ -38,4 +38,11 @@ and in the launcher, the loading order should be (from top to bottom):
 [*]Edict for low cost colony and more development colony speed.
 [*]Edict for trade value boost
 [*]Edict for more growth speed
+[*]Trait leader charismati now give pop_factions_produces_mult = 0.25 instead of country_edict_fund_add = 20
 [/list]
+[h2]Military [/h2]
+[list]
+[*]point defense is little best
+[*]Upgrade tech hull now give 25% hull (before 10%)
+[/list]
+

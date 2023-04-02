@@ -212,6 +212,7 @@ utility_component_template = {
 	component_set = "power_core"
 	size_restriction = {
 		battleship
+		offspring_battleship
 		carrier
 	}
 	upgrades_to = "BATTLESHIP_FUSION_REACTOR"
@@ -411,6 +412,7 @@ utility_component_template = {
 	component_set = "power_core"
 	size_restriction = {
 		battleship
+		offspring_battleship
 		carrier
 	}
 	upgrades_to = "BATTLESHIP_COLD_FUSION_REACTOR"
@@ -610,6 +612,7 @@ utility_component_template = {
 	component_set = "power_core"
 	size_restriction = {
 		battleship
+		offspring_battleship
 		carrier
 	}
 	upgrades_to = "BATTLESHIP_ANTIMATTER_REACTOR"
@@ -809,6 +812,7 @@ utility_component_template = {
 	component_set = "power_core"
 	size_restriction = {
 		battleship
+		offspring_battleship
 		carrier
 	}
 	upgrades_to = "BATTLESHIP_ZERO_POINT_REACTOR"
@@ -1008,6 +1012,7 @@ utility_component_template = {
 	component_set = "power_core"
 	size_restriction = {
 		battleship
+		offspring_battleship
 		carrier
 	}
 	upgrades_to = "BATTLESHIP_DARK_MATTER_REACTOR"
@@ -1262,6 +1267,7 @@ utility_component_template = {
 	component_set = "power_core"
 	size_restriction = {
 		battleship
+		offspring_battleship
 		carrier
 	}
 

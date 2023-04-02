@@ -22,7 +22,7 @@ d_exotic_gases_1 = {
 		category = orbital_mining_deposits
 		produces = {
 			exotic_gases = 2
-			energy = -4
+			energy = -5
 		}
 	}
 

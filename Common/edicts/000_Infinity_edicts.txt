@@ -2,9 +2,10 @@
 # Empire edicts
 ##########################################################################
 
-@Edict1Cost = 100
-@Edict2Cost = 200
-@Edict3Cost = 300
+@Edict1Cost = 10
+@Edict2Cost = 20
+@Edict3Cost = 30
+@EdictSpecialCost = 1
 
 @EdictPerpetual = -1
 
@@ -20,6 +21,7 @@ costruction = {
 		category = edicts
 		cost = {
 			influence = @Edict2Cost 
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -43,6 +45,7 @@ colonization_boost_troll = {
 		category = edicts
 		cost = {
 			influence = @Edict1Cost 
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -75,13 +78,15 @@ free_healt_care = {
 			trigger = {
 				NOT = { has_edict = free_healt_care }
 			}
-			influence = 300
+			influence = Edict2Cost
+			multiplier = value:edict_size_effect
 		}
 		cost = { #Deactivation Cost
 			trigger = {
 				has_edict = free_healt_care 
 			}
-			influence = 150
+			influence = Edict3Cost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -110,7 +115,8 @@ trade_value_boost = {
 	resources = {
 		category = edicts
 		cost = { 
-			influence = 200
+			influence = Edict2Cost
+			multiplier = value:edict_size_effect
 		}
 	}
 
