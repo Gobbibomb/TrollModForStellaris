@@ -7,4 +7,5 @@ tags={
 }
 name="Troll for funny with friends"
 picture="thumbnail.png"
-supported_version="3.2.2"
+supported_version="3.7.4"
+remote_file_id="2956643355"
