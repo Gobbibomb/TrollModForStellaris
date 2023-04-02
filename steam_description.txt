@@ -1,6 +1,7 @@
 
 [quote=Gobbibomb]
-This mod is stable and playable but [b]currently under further development[/b].
+This mod is stable for 3.7.4 and playable but [b]currently under further development[/b].
+This mod is create for troll, and is in italian.
 
 [/quote]
 
@@ -8,17 +9,6 @@ This mod is stable and playable but [b]currently under further development[/b].
 
 [h1][b]Overview[/b][/h1]
 This mod to offer a multiplayer different experience with focus production rare resource on systems requirement phi mod.
-
-[h1][b]How to install[/b][/h1]
-Requires 1 other mods in order to function normally. Those are:
-
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247841088] Phi mp balancing[/url]
-
-and in the launcher, the loading order should be (from top to bottom):
-[olist]
-[*]troll
-[*]phi mp balancing
-[/olist]
 
 [h1][b]The Changes to Vanilla[/b][/h1]
 [h2]Civilian and Resource[/h2]
@@ -42,7 +32,6 @@ and in the launcher, the loading order should be (from top to bottom):
 [/list]
 [h2]Military [/h2]
 [list]
-[*]point defense is little best
+[*]point defense not flak is little best with range.
 [*]Upgrade tech hull now give 25% hull (before 10%)
 [/list]
-
