@@ -13,3 +13,9 @@ empire_init_capital_planet = {
 		eo_game_start.2
 	}
 }
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		#rules.99				#border gore check
+	}
+}

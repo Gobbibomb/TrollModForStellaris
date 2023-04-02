@@ -51,7 +51,7 @@ leader_trait_governor_society: "Tradizionale"
 leader_trait_governor_engineering: "Fisico"
 leader_trait_governor_physics: "Ingegnere"
 leader_trait_big_weapon: "Appassionato di grandi armi"
-TRAIT_VENERABLE_EFFECT:0 "Età leader +45 anni\n Resource from ruler £job£ §G+100%§!\n felicità pop = §R-10%§!\n£trade_value£ Trade Value from £job£ merchant: §G+100%§!"
+#TRAIT_VENERABLE_EFFECT:0 "Età leader +45 anni\n Resource from ruler £job£ §G+100%§!\n felicità pop = §R-10%§!\n£trade_value£ Trade Value from £job£ merchant: §G+100%§!"
 
 #generals traits
 leader_trait_big_weapon: "Armamento grosso"

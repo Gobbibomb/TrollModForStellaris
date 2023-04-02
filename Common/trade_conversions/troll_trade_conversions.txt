@@ -31,8 +31,7 @@ trade_league_conversion =
 		energy = 0.25
 		consumer_goods = 0.20
 		unity = 0.25
-		society_research = 0.25
-		alloys = 0.01
+		alloys = 0.015
 	}
 
 	economic_category = trade_routes

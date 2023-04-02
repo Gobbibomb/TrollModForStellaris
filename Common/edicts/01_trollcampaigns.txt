@@ -1,13 +1,11 @@
-@Edict1Cost = 100
-@Edict2Cost = 200
-@Edict3Cost = 300
+
 
 @EdictDuration = 3600
 
 # Sets the cost for all campaigns with this variable
 @campaignCost = 1000
 @campaignDuration = 3600
-@campaignCostLow = 150
+@campaignCostLow = 15
 @campaignDurationLow = 360
 
 emergency_measure = {
@@ -17,7 +15,8 @@ emergency_measure = {
 		category = campaigns
 		cost = {
 			energy = @campaignCostLow
-			influence = 0.9
+			influence = 0.1
+			multiplier = value:edict_size_effect
 		}
 	}
 

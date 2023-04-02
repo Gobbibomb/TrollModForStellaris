@@ -21,8 +21,13 @@ tech_space_exploration = {
 	area = engineering
 	start_tech = yes
 	category = { voidcraft }
-	prerequisites = { "tech_basic_science_lab_1" }
 	tier = 0
+
+	#allow auto-explore on science ships
+	feature_flags = {
+		tech_automated_exploration
+		unlocks_auto_research
+	}
 
 	prereqfor_desc = {
 		ship = {
@@ -33,7 +38,7 @@ tech_space_exploration = {
 }
 
 tech_corvettes = {
-	cost = 0
+	cost = @tier0cost1
 	area = engineering
 	start_tech = yes
 	category = { voidcraft }
@@ -45,6 +50,18 @@ tech_corvettes = {
 			title = "TECH_UNLOCK_CORVETTE_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_CORVETTE_CONSTRUCTION_DESC"
 		}
+	}
+
+	weight_modifier = {
+		factor = 1000
+	}
+
+	ai_weight = {
+		weight = 10000
+	}
+
+	starting_potential = {
+		is_low_tech_start = no # So Broken Shackles origin players don't start with it
 	}
 }
 
@@ -98,16 +115,20 @@ tech_destroyers = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 100 #important tech
+		factor = @ai_ship_types_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -168,16 +189,20 @@ tech_cruisers = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 100 #higher factor due to cruiser hull
+		factor = @ai_ship_types_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -236,16 +261,20 @@ tech_battleships = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 1000 #higher factor due to battleship hull
+		factor = @ai_ship_types_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -314,16 +343,20 @@ tech_titans = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 1000 #higher factor due to titan hull
+		factor = @ai_ship_types_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -339,13 +372,12 @@ tech_juggernaut = {
 	area = engineering
 	category = { voidcraft }
 	tier = 5
-	prerequisites = { "tech_starbase_5" "tech_carriers" }
+	prerequisites = { "tech_starbase_5" "tech_battleships" }
 	weight = @tier5weight3
 	is_rare = yes
 
 	potential = {
 		host_has_dlc = "Federations"
-		host_has_dlc = "Apocalypse"
 	}
 
 	# unlocks Juggernaut
@@ -402,7 +434,7 @@ tech_juggernaut = {
 	}
 
 	ai_weight = {
-		factor = 100 #higher factor due to really cool thing
+		factor = @ai_ship_types_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -426,17 +458,24 @@ tech_corvette_build_speed = {
 	weight = @tier1weight2
 
 	modifier = {
-		shipsize_corvette_build_speed_mult = 0.25
+		custom_tooltip = tech_corvette_build_speed_effect
 		ship_corvette_cost_mult = -0.05
+		shipsize_corvette_build_speed_mult = 0.25
+		shipsize_offspring_corvette_build_speed_mult = 0.25
+		shipsize_frigate_build_speed_mult = 0.25
 	}
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
 		}
 	}
 
@@ -460,21 +499,27 @@ tech_corvette_hull_1 = {
 	weight = @tier1weight3
 
 	modifier = {
-		shipsize_corvette_hull_mult = 0.33
+		custom_tooltip = tech_corvette_hull_effect
+		shipsize_corvette_hull_mult = 0.25
+		shipsize_offspring_corvette_hull_mult = 0.25
+		shipsize_frigate_hull_mult = 0.25
 	}
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 3 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -495,7 +540,10 @@ tech_corvette_hull_2 = {
 	weight = @tier2weight3
 
 	modifier = {
-		shipsize_corvette_hull_mult = 0.33
+		custom_tooltip = tech_corvette_hull_effect
+		shipsize_corvette_hull_mult = 0.25
+		shipsize_offspring_corvette_hull_mult = 0.25
+		shipsize_frigate_hull_mult = 0.25
 	}
 
 	weight_modifier = {
@@ -529,16 +577,19 @@ tech_corvette_hull_2 = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 3 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -562,17 +613,23 @@ tech_destroyer_build_speed = {
 	weight = @tier2weight2
 
 	modifier = {
-		shipsize_destroyer_build_speed_mult = 0.25
+		custom_tooltip = tech_destroyer_build_speed_effect
 		ship_destroyer_cost_mult = -0.05
+		shipsize_destroyer_build_speed_mult = 0.25
+		shipsize_offspring_destroyer_build_speed_mult = 0.25
 	}
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
 		}
 	}
 
@@ -596,7 +653,9 @@ tech_destroyer_hull_1 = {
 	weight = @tier2weight3
 
 	modifier = {
-		shipsize_destroyer_hull_mult = 0.33
+		custom_tooltip = tech_destroyer_hull_effect
+		shipsize_destroyer_hull_mult = 0.25
+		shipsize_offspring_destroyer_hull_mult = 0.25
 	}
 
 	weight_modifier = {
@@ -605,16 +664,19 @@ tech_destroyer_hull_1 = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 3 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -635,7 +697,9 @@ tech_destroyer_hull_2 = {
 	weight = @tier3weight1
 
 	modifier = {
-		shipsize_destroyer_hull_mult = 0.33
+		custom_tooltip = tech_destroyer_hull_effect
+		shipsize_destroyer_hull_mult = 0.25
+		shipsize_offspring_destroyer_hull_mult = 0.25
 	}
 
 	weight_modifier = {
@@ -673,16 +737,19 @@ tech_destroyer_hull_2 = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 3 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -706,17 +773,23 @@ tech_cruiser_build_speed = {
 	weight = @tier3weight2
 
 	modifier = {
-		shipsize_cruiser_build_speed_mult = 0.25
+		custom_tooltip = tech_cruiser_build_speed_effect
 		ship_cruiser_cost_mult = -0.05
+		shipsize_cruiser_build_speed_mult = 0.25
+		shipsize_offspring_cruiser_build_speed_mult = 0.25
 	}
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
 		}
 	}
 
@@ -740,7 +813,9 @@ tech_cruiser_hull_1 = {
 	weight = @tier3weight3
 
 	modifier = {
-		shipsize_cruiser_hull_mult = 0.33
+		custom_tooltip = tech_cruiser_hull_effect
+		shipsize_cruiser_hull_mult = 0.25
+		shipsize_offspring_cruiser_hull_mult = 0.25
 	}
 
 	weight_modifier = {
@@ -749,16 +824,19 @@ tech_cruiser_hull_1 = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 3 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -779,7 +857,9 @@ tech_cruiser_hull_2 = {
 	weight = @tier4weight1
 
 	modifier = {
-		shipsize_cruiser_hull_mult = 0.33
+		custom_tooltip = tech_cruiser_hull_effect
+		shipsize_cruiser_hull_mult = 0.25
+		shipsize_offspring_cruiser_hull_mult = 0.25
 	}
 
 	weight_modifier = {
@@ -817,16 +897,19 @@ tech_cruiser_hull_2 = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 3 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -850,17 +933,23 @@ tech_battleship_build_speed = {
 	weight = @tier4weight2
 
 	modifier = {
-		shipsize_battleship_build_speed_mult = 0.25
+		custom_tooltip = tech_battleship_build_speed_effect
 		ship_battleship_cost_mult = -0.05
+		shipsize_battleship_build_speed_mult = 0.25
+		shipsize_offspring_battleship_build_speed_mult = 0.25
 	}
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
 		}
 	}
 
@@ -884,7 +973,9 @@ tech_battleship_hull_1 = {
 	weight = @tier4weight3
 
 	modifier = {
-		shipsize_battleship_hull_mult = 0.33
+		custom_tooltip = tech_battleship_hull_effect
+		shipsize_battleship_hull_mult = 0.25
+		shipsize_offspring_battleship_hull_mult = 0.25
 	}
 
 	weight_modifier = {
@@ -893,16 +984,19 @@ tech_battleship_hull_1 = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 3 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -923,7 +1017,9 @@ tech_battleship_hull_2 = {
 	weight = @tier5weight1
 
 	modifier = {
-		shipsize_battleship_hull_mult = 0.33
+		custom_tooltip = tech_battleship_hull_effect
+		shipsize_battleship_hull_mult = 0.25
+		shipsize_offspring_battleship_hull_mult = 0.25
 	}
 
 	weight_modifier = {
@@ -961,16 +1057,19 @@ tech_battleship_hull_2 = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 3 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -995,7 +1094,7 @@ tech_titan_hull_1 = {
 	weight = @tier5weight2
 
 	modifier = {
-		shipsize_titan_hull_mult = 0.33
+		shipsize_titan_hull_mult = 0.25
 	}
 
 	weight_modifier = {
@@ -1033,16 +1132,19 @@ tech_titan_hull_1 = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 3 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1063,7 +1165,7 @@ tech_titan_hull_2 = {
 	weight = @tier5weight3
 
 	modifier = {
-		shipsize_titan_hull_mult = 0.33
+		shipsize_titan_hull_mult = 0.25
 	}
 
 	weight_modifier = {
@@ -1101,16 +1203,19 @@ tech_titan_hull_2 = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 3 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1173,6 +1278,10 @@ tech_starbase_3 = {
 	# unlocks Starhold
 	weight_modifier = {
 		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 20 }
+		}
+		modifier = {
 			factor = 10
 			any_neighbor_country = {
 				has_technology = tech_starbase_3
@@ -1202,11 +1311,15 @@ tech_starbase_3 = {
 			has_tradition = tr_unyielding_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
 		}
 	}
 
@@ -1218,7 +1331,7 @@ tech_starbase_3 = {
 	}
 
 	ai_weight = {
-		factor = 100 #higher factor due to starbase upgrade
+		factor = @ai_starbase_types_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1239,6 +1352,10 @@ tech_starbase_4 = {
 
 	# unlocks Star Fortress
 	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 50 }
+		}
 		modifier = {
 			factor = 10
 			any_neighbor_country = {
@@ -1269,11 +1386,15 @@ tech_starbase_4 = {
 			has_tradition = tr_unyielding_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
 		}
 	}
 
@@ -1285,7 +1406,7 @@ tech_starbase_4 = {
 	}
 
 	ai_weight = {
-		factor = 100 #higher factor due to starbase upgrade
+		factor = @ai_starbase_types_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1308,7 +1429,7 @@ tech_starbase_5 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0.1
-			NOT = { years_passed > 50 }
+			NOT = { years_passed > 70 }
 		}
 		modifier = {
 			factor = 10
@@ -1340,11 +1461,15 @@ tech_starbase_5 = {
 			has_tradition = tr_unyielding_adopt
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
 		}
 	}
 
@@ -1356,7 +1481,7 @@ tech_starbase_5 = {
 	}
 
 	ai_weight = {
-		factor = 100 #higher factor due to starbase upgrade
+		factor = @ai_starbase_types_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1378,12 +1503,17 @@ tech_habitat_1 = {
 	potential = {
 		OR = {
 			has_origin = origin_void_dwellers
+			has_origin = origin_toxic_knights
 			host_has_dlc = "Utopia"
 		}
 	}
 
 	# unlocks Habitats
 	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 50 }
+		}
 		modifier = {
 			factor = 10
 			any_neighbor_country = {
@@ -1392,15 +1522,15 @@ tech_habitat_1 = {
 		}
 		modifier = {
 			factor = 2
-			years_passed > 20
+			years_passed > 60
 		}
 		modifier = {
 			factor = 3
-			years_passed > 30
+			years_passed > 65
 		}
 		modifier = {
 			factor = 4
-			years_passed > 40
+			years_passed > 70
 		}
 		modifier = {
 			factor = 5
@@ -1418,11 +1548,15 @@ tech_habitat_1 = {
 			has_tradition = tr_expansion_finish
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
 		}
 	}
 
@@ -1434,10 +1568,12 @@ tech_habitat_1 = {
 	}
 
 	ai_weight = {
-		factor = 1
 		modifier = {
-			factor = 0
-			NOT = { has_origin = origin_void_dwellers }
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
 		}
 	}
 }
@@ -1453,7 +1589,7 @@ tech_habitat_2 = {
 
 	potential = {
 		OR = {
-			has_origin = origin_void_dwellers
+			has_origin = origin_void_dwellers #Not toxic knights, they just need level 1 tech
 			host_has_dlc = "Utopia"
 		}
 	}
@@ -1479,16 +1615,19 @@ tech_habitat_2 = {
 			has_origin = origin_void_dwellers
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 1
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1536,16 +1675,19 @@ tech_habitat_3 = {
 			has_origin = origin_void_dwellers
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 1
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1603,16 +1745,19 @@ tech_modular_engineering = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
 	}
 
 	ai_weight = {
-		factor = 100 #higher factor due to starbase upgrade
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1652,6 +1797,10 @@ tech_space_defense_station_improvement = {
 					has_trait = "leader_trait_curator"
 				}
 			}
+		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1702,11 +1851,15 @@ tech_strike_craft_1 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
 		}
 	}
 
@@ -1717,6 +1870,14 @@ tech_strike_craft_1 = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 		}
 	}
 }
@@ -1734,11 +1895,15 @@ tech_strike_craft_2 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
 		}
 	}
 
@@ -1749,6 +1914,14 @@ tech_strike_craft_2 = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 		}
 	}
 }
@@ -1766,11 +1939,15 @@ tech_strike_craft_3 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
 		}
 	}
 
@@ -1781,6 +1958,14 @@ tech_strike_craft_3 = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 		}
 	}
 }
@@ -1828,11 +2013,15 @@ tech_ship_armor_2 = {
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
 		}
 	}
 
@@ -1862,11 +2051,15 @@ tech_ship_armor_3 = {
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
 		}
 	}
 
@@ -1896,11 +2089,15 @@ tech_ship_armor_4 = {
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
 		}
 	}
 
@@ -1928,11 +2125,15 @@ tech_ship_armor_5 = {
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
 		}
 	}
 
@@ -1998,6 +2199,66 @@ tech_crystal_armor_2 = {
 	}
 }
 
+tech_armor_hardeners_1 = {
+	area = engineering
+	cost = @tier2cost3
+	tier = 2
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_advanced_metallurgy_1" "tech_rare_crystals" }
+	weight = @tier2weight3
+
+	weight_modifier = {
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_armor_hardeners_2 = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_armor_hardeners_1" "tech_mine_living_metal" }
+	weight = @tier5weight3
+
+	weight_modifier = {
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
 # ##################
 # Thruster Components
 # ##################
@@ -2033,7 +2294,7 @@ tech_thrusters_2 = {
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_propulsion"
@@ -2054,7 +2315,6 @@ tech_thrusters_2 = {
 	}
 
 	ai_weight = {
-		factor = 1.25 #important component
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2078,7 +2338,7 @@ tech_thrusters_3 = {
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_propulsion"
@@ -2099,7 +2359,6 @@ tech_thrusters_3 = {
 	}
 
 	ai_weight = {
-		factor = 1.25 #important component
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2123,7 +2382,7 @@ tech_thrusters_4 = {
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_propulsion"
@@ -2144,7 +2403,6 @@ tech_thrusters_4 = {
 	}
 
 	ai_weight = {
-		factor = 1.25 #important component
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2193,11 +2451,19 @@ tech_defense_platform_hull_1 = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_eager_explorers
+		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
 		}
 	}
 
@@ -2245,13 +2511,13 @@ tech_powered_exoskeletons = {
 
 	modifier = {
 		army_damage_mult = 0.05
-		planet_jobs_minerals_produces_mult = 0.05
+		planet_jobs_worker_produces_mult = 0.05
 	}
 
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -2260,13 +2526,17 @@ tech_powered_exoskeletons = {
 	}
 
 	ai_weight = {
-		factor = 2
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
 			}
+		}
+		modifier = {
+			factor = @robots_ai_tech_factor
+			is_spiritualist = no
+			is_hive_empire = no
 		}
 	}
 }
@@ -2285,7 +2555,7 @@ tech_space_mining_1 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -2318,7 +2588,7 @@ tech_space_mining_2 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -2346,12 +2616,12 @@ tech_space_mining_3 = {
 	weight = @tier2weight1
 
 	modifier = {
-		station_gatherers_produces_mult = 0.15
+		station_gatherers_produces_mult = 0.10
 	}
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -2379,12 +2649,12 @@ tech_space_mining_4 = {
 	weight = @tier2weight3
 
 	modifier = {
-		station_gatherers_produces_mult = 0.15
+		station_gatherers_produces_mult = 0.10
 	}
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -2412,12 +2682,12 @@ tech_space_mining_5 = {
 	weight = @tier3weight1
 
 	modifier = {
-		station_gatherers_produces_mult = 0.30
+		station_gatherers_produces_mult = 0.10
 	}
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -2447,12 +2717,12 @@ tech_mining_1 = {
 
 	modifier = {
 		planet_miners_minerals_produces_mult = 0.20
-		starbase_constructions_minerals_produces_mult = 0.20
+		starbase_constructions_minerals_produces_mult = 0.10
 	}
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -2461,6 +2731,7 @@ tech_mining_1 = {
 	}
 
 	ai_weight = {
+		factor = @ai_mining_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2482,12 +2753,12 @@ tech_mining_2 = {
 
 	modifier = {
 		planet_miners_minerals_produces_mult = 0.20
-		starbase_constructions_minerals_produces_mult = 0.20
+		starbase_constructions_minerals_produces_mult = 0.10
 	}
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -2496,6 +2767,7 @@ tech_mining_2 = {
 	}
 
 	ai_weight = {
+		factor = @ai_mining_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2517,12 +2789,12 @@ tech_mining_3 = {
 
 	modifier = {
 		planet_miners_minerals_produces_mult = 0.20
-		starbase_constructions_minerals_produces_mult = 0.20
+		starbase_constructions_minerals_produces_mult = 0.10
 	}
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -2531,6 +2803,7 @@ tech_mining_3 = {
 	}
 
 	ai_weight = {
+		factor = @ai_mining_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2552,15 +2825,21 @@ tech_mineral_purification_1 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = prospectorium }
+		}
 	}
 
 	ai_weight = {
+		factor = @ai_mining_building_factor
+
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2583,11 +2862,15 @@ tech_mineral_purification_2 = {
 	weight_modifier = {
 		factor = 2
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
 			}
+		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = prospectorium }
 		}
 		modifier = {
 			factor = 0
@@ -2600,6 +2883,7 @@ tech_mineral_purification_2 = {
 	}
 
 	ai_weight = {
+		factor = @ai_mining_building_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2631,15 +2915,20 @@ tech_alloys_1 = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = prospectorium }
+		}
 	}
 
 	ai_weight = {
+		factor = @ai_alloy_factor_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2664,15 +2953,20 @@ tech_alloys_2 = {
 	weight_modifier = {
 		factor = 2
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = prospectorium }
+		}
 	}
 
 	ai_weight = {
+		factor = @ai_alloy_factor_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2698,7 +2992,7 @@ tech_advanced_metallurgy_1 = {
 	weight_modifier = {
 		factor = 2
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
@@ -2732,7 +3026,7 @@ tech_advanced_metallurgy_2 = {
 	weight_modifier = {
 		factor = 2
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
@@ -2762,6 +3056,13 @@ tech_luxuries_1 = {
 
 	# Unlocks better consumer goods buildings
 
+	potential = {
+		OR = {
+			is_gestalt = no
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
 	weight_modifier = {
 		modifier = {
 			factor = 0
@@ -2772,15 +3073,20 @@ tech_luxuries_1 = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = prospectorium }
+		}
 	}
 
 	ai_weight = {
+		factor = @ai_civilian_factory_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2802,18 +3108,30 @@ tech_luxuries_2 = {
 
 	# Unlocks better luxury goods buildings
 
+	potential = {
+		OR = {
+			is_gestalt = no
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
 	weight_modifier = {
 		factor = 2
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = prospectorium }
+		}
 	}
 
 	ai_weight = {
+		factor = @ai_civilian_factory_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2858,16 +3176,20 @@ tech_engineering_1 = {
 			years_passed > 20
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = scholarium }
+		}
 	}
 
 	ai_weight = {
-		weight = 1000
+		factor = @ai_engineering_tech_speed_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2909,16 +3231,20 @@ tech_engineering_2 = {
 			years_passed > 40
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = scholarium }
+		}
 	}
 
 	ai_weight = {
-		weight = 1000
+		factor = @ai_engineering_tech_speed_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2960,16 +3286,20 @@ tech_engineering_3 = {
 			years_passed > 40
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = scholarium }
+		}
 	}
 
 	ai_weight = {
-		weight = 1000
+		factor = @ai_engineering_tech_speed_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2995,7 +3325,6 @@ tech_robotic_workers = {
 
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
-		NOT = { has_policy_flag = robots_outlawed }
 	}
 
 	weight_modifier = {
@@ -3019,7 +3348,7 @@ tech_robotic_workers = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -3028,7 +3357,7 @@ tech_robotic_workers = {
 	}
 
 	ai_weight = {
-		weight = 2
+		factor = @robots_ai_tech_factor
 		modifier = {
 			factor = 2
 			OR = {
@@ -3038,12 +3367,13 @@ tech_robotic_workers = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				has_origin = origin_mechanists
+			NOR = {
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
 			}
 		}
 		modifier = {
-			factor = 2000
+			factor = 2
 			has_origin = origin_mechanists
 		}
 		modifier = {
@@ -3079,6 +3409,13 @@ tech_droid_workers = {
 			has_policy_flag = robots_outlawed
 		}
 		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+		modifier = {
 			factor = 2
 			OR = {
 				has_ethic = ethic_materialist
@@ -3090,7 +3427,7 @@ tech_droid_workers = {
 			has_origin = origin_mechanists
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -3100,7 +3437,7 @@ tech_droid_workers = {
 	}
 
 	ai_weight = {
-		weight = 2
+		factor = @robots_ai_tech_factor
 		modifier = {
 			factor = 2
 			OR = {
@@ -3113,12 +3450,6 @@ tech_droid_workers = {
 			NOR = {
 				has_ai_personality_behaviour = robot_exploiter
 				has_ai_personality_behaviour = robot_liberator
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_origin = origin_mechanists
 			}
 		}
 		modifier = {
@@ -3195,10 +3526,6 @@ tech_synthetic_workers = {
 			has_origin = origin_mechanists
 		}
 		modifier = {
-			factor = 4
-			has_ascension_perk = ap_the_flesh_is_weak
-		}
-		modifier = {
 			factor = 0.20
 			NOR = {
 				research_leader = {
@@ -3222,7 +3549,7 @@ tech_synthetic_workers = {
 	}
 
 	ai_weight = {
-		weight = 2
+		factor = @robots_ai_tech_factor
 		modifier = {
 			factor = 2
 			OR = {
@@ -3278,7 +3605,7 @@ tech_synthetic_leaders = {
 			has_policy_flag = ai_outlawed
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -3293,15 +3620,132 @@ tech_synthetic_leaders = {
 	}
 
 	ai_weight = {
-		weight = 2
 		modifier = {
 			factor = 0
 			NOT = { has_ai_personality_behaviour = robot_exploiter }
 			NOT = { has_ai_personality_behaviour = robot_liberator }
 		}
+		modifier = {
+			factor = 2
+			is_materialist = yes
+		}
 	}
 }
 
+# Advanced Robotic Assembly
+tech_robot_assembly_complex = {
+	icon = "tech_mega_assembly"
+	cost = @tier4cost1
+	area = engineering
+	tier = 4
+	category = { industry }
+	prerequisites = { "tech_robomodding" "tech_galactic_administration" }
+	is_rare = yes
+	weight = @tier4weight1
+
+	potential = {
+		NOT = { has_ethic = "ethic_gestalt_consciousness" }
+	}
+
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_industry"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_robot_assembly_complex }
+			}
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @pop_growth_tech_ai_factor
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+#Integrated Cybernetics
+tech_integrated_cybernetics = {
+	cost = @tier2cost3
+	area = engineering
+	tier = 2
+	category = { industry }
+	prerequisites = { "tech_powered_exoskeletons" "tech_colonial_centralization" }
+	weight = @tier2weight3
+
+	modifier = {
+		pop_environment_tolerance = 0.05
+	}
+
+	potential = {
+		OR = {
+			is_machine_empire = no
+			has_civic = civic_machine_assimilator
+		}
+	}
+
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
 
 # ##################
 # Space Mining
@@ -3332,9 +3776,8 @@ tech_space_construction = {
 	}
 
 	ai_weight = {
-		factor = 10 #very important tech
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -3362,7 +3805,7 @@ tech_afterburners_1 = {
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_propulsion"
@@ -3386,7 +3829,6 @@ tech_afterburners_1 = {
 	}
 
 	ai_weight = {
-		factor = 2 #important component
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -3410,7 +3852,7 @@ tech_afterburners_2 = {
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_propulsion"
@@ -3426,7 +3868,6 @@ tech_afterburners_2 = {
 	}
 
 	ai_weight = {
-		factor = 1.25 #important component
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -3455,7 +3896,7 @@ tech_assembly_pattern = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -3493,6 +3934,8 @@ tech_construction_templates = {
 	modifier = {
 		planet_building_build_speed_mult = 0.50
 		empire_size_districts_mult = -0.10
+		show_only_custom_tooltip = no
+		custom_tooltip = tech_construction_templates_effect
 	}
 
 	weight_modifier = {
@@ -3560,7 +4003,7 @@ tech_housing_1 = {
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -3569,13 +4012,16 @@ tech_housing_1 = {
 	}
 
 	ai_weight = {
-		factor = 1000
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
 			}
+		}
+		modifier = {
+			factor = @housing_ai_tech_factor
+			num_pops >= 100
 		}
 	}
 }
@@ -3599,7 +4045,7 @@ tech_housing_2 = {
 			has_valid_civic = civic_agrarian_idyll
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
@@ -3608,13 +4054,16 @@ tech_housing_2 = {
 	}
 
 	ai_weight = {
-		factor = 1000
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
 			}
+		}
+		modifier = {
+			factor = @housing_ai_tech_factor
+			num_pops >= 100
 		}
 	}
 }
