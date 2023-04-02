@@ -1,5 +1,5 @@
 trait_agrarian = {
-	cost = 2
+	cost = 1
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
