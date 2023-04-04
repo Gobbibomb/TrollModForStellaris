@@ -1,1 +1,2 @@
-trait_venerable + 100% trade value? inizialmente era +12 guardare esempio trait_thrifty or trait_nuumismatic_administration
+trait_venerable + 100% trade value? inizialmente era +12 guardare esempio trait_thrifty +3or trait_nuumismatic_administration
+leader_trait_engineer fanne due separati, uno di hull e uno di armor e aumenta upkeep
