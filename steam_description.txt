@@ -35,3 +35,8 @@ This mod to offer a multiplayer different experience with focus production rare 
 [*]point defense not flak is little best with range.
 [*]Upgrade tech hull now give 25% hull (before 10%)
 [/list]
+[h2][/h2]
+[list]
+[*]Now is big unique building for research that if upgrade can build other
+[*]
+[/list]

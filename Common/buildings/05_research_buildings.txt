@@ -4,8 +4,19 @@
 #18-2-2*3 = 10
 @b_base_jobs = 10
 @h_base_jobs = 11
+
 @soc_base_jobs = 2
 @res_base_jobs = 2
+
+@b_base_jobs2 = 20
+@h_base_jobs2 = 22
+@soc_base_jobs2 = 4
+@res_base_jobs2 = 3
+
+@b_base_jobs3 = 30
+@h_base_jobs3 = 33
+@soc_base_jobs3 = 6
+@res_base_jobs3 = 4
 building_research_lab_1 = {
 	base_buildtime = @b1_time
 	empire_limit = {
@@ -65,7 +76,7 @@ building_research_lab_1 = {
 		}
 		modifier = {
 			job_calculatorbase_add = @h_base_jobs
-			job_bcalculatorbaseEG_add = @res_base_jobs
+			job_calculatorbaseEG_add = @res_base_jobs
 			job_calculatorbaseRC_add = @res_base_jobs
 			job_calculatorbaseVM_add = @res_base_jobs
 		}
@@ -119,7 +130,7 @@ building_research_lab_2 = {
 	base_buildtime = @b2_time
 	can_build = no
 	empire_limit = {
-	 	base = 1
+	 	base = 2
 	}
 	category = research
 
@@ -141,11 +152,11 @@ building_research_lab_2 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcherbase_add = @b_base_jobs
-			job_researcherbaseS_add = @soc_base_jobs
-			job_researcherbaseEG_add = @res_base_jobs
-			job_researcherbaseRC_add = @res_base_jobs
-			job_researcherbaseVM_add = @res_base_jobs
+			job_researcherbase_add = @b_base_jobs2
+			job_researcherbaseS_add = @soc_base_jobs2
+			job_researcherbaseEG_add = @res_base_jobs2
+			job_researcherbaseRC_add = @res_base_jobs2
+			job_researcherbaseVM_add = @res_base_jobs2
 		}
 	}
 
@@ -155,10 +166,10 @@ building_research_lab_2 = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_droneBase_add = @h_base_jobs
-			job_brain_droneBaseEG_add = @res_base_jobs
-			job_brain_droneBaseRC_add = @res_base_jobs
-			job_brain_droneBaseVM_add = @res_base_jobs
+			job_brain_droneBase_add = @b_base_jobs2
+			job_brain_droneBaseEG_add = @res_base_jobs2
+			job_brain_droneBaseRC_add = @res_base_jobs2
+			job_brain_droneBaseVM_add = @res_base_jobs2
 		}
 	}
 
@@ -168,10 +179,10 @@ building_research_lab_2 = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculatorbase_add = @h_base_jobs
-			job_bcalculatorbaseEG_add = @res_base_jobs
-			job_calculatorbaseRC_add = @res_base_jobs
-			job_calculatorbaseVM_add = @res_base_jobs
+			job_calculatorbase_add = @b_base_jobs2
+			job_calculatorbaseEG_add = @res_base_jobs2
+			job_calculatorbaseRC_add = @res_base_jobs2
+			job_calculatorbaseVM_add = @res_base_jobs2
 		}
 	}
 
@@ -224,7 +235,7 @@ building_research_lab_3 = {
 	base_buildtime = @b3_time
 	can_build = no
 	empire_limit = {
-	 	base = 1
+	 	base = 3
 	}
 	category = research
 
@@ -247,11 +258,11 @@ building_research_lab_3 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcherbase_add = @b_base_jobs
-			job_researcherbaseS_add = @soc_base_jobs
-			job_researcherbaseEG_add = @res_base_jobs
-			job_researcherbaseRC_add = @res_base_jobs
-			job_researcherbaseVM_add = @res_base_jobs
+			job_researcherbase_add = @b_base_jobs3
+			job_researcherbaseS_add = @soc_base_jobs3
+			job_researcherbaseEG_add = @res_base_jobs3
+			job_researcherbaseRC_add = @res_base_jobs3
+			job_researcherbaseVM_add = @res_base_jobs3
 		}
 	}
 
@@ -261,10 +272,10 @@ building_research_lab_3 = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_droneBase_add = @h_base_jobs
-			job_brain_droneBaseEG_add = @res_base_jobs
-			job_brain_droneBaseRC_add = @res_base_jobs
-			job_brain_droneBaseVM_add = @res_base_jobs
+			job_brain_droneBase_add = @h_base_jobs3
+			job_brain_droneBaseEG_add = @res_base_jobs3
+			job_brain_droneBaseRC_add = @res_base_jobs3
+			job_brain_droneBaseVM_add = @res_base_jobs3
 		}
 	}
 
@@ -274,10 +285,10 @@ building_research_lab_3 = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculatorbase_add = @h_base_jobs
-			job_bcalculatorbaseEG_add = @res_base_jobs
-			job_calculatorbaseRC_add = @res_base_jobs
-			job_calculatorbaseVM_add = @res_base_jobs
+			job_calculatorbase_add = @h_base_jobs3
+			job_calculatorbaseEG_add = @res_base_jobs3
+			job_calculatorbaseRC_add = @res_base_jobs3
+			job_calculatorbaseVM_add = @res_base_jobs3
 		}
 	}
 
