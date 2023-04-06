@@ -1,27 +1,11 @@
 #############
 # Science buildings
 #############
-#18-2-2*3 = 10
-@b_base_jobs = 10
-@h_base_jobs = 11
-
-@soc_base_jobs = 2
-@res_base_jobs = 2
-
-@b_base_jobs2 = 20
-@h_base_jobs2 = 22
-@soc_base_jobs2 = 4
-@res_base_jobs2 = 3
-
-@b_base_jobs3 = 30
-@h_base_jobs3 = 33
-@soc_base_jobs3 = 6
-@res_base_jobs3 = 4
+@b1_rare_cost = 25
+@b1_rare_upkeep = 0.5
 building_research_lab_1 = {
 	base_buildtime = @b1_time
-	empire_limit = {
-	 	base = 1
-	}
+
 	exempt_from_ai_planet_specialization = no
 
 	category = research
@@ -48,11 +32,7 @@ building_research_lab_1 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcherbase_add = @b_base_jobs
-			job_researcherbaseS_add = @soc_base_jobs
-			job_researcherbaseEG_add = @res_base_jobs
-			job_researcherbaseRC_add = @res_base_jobs
-			job_researcherbaseVM_add = @res_base_jobs
+			job_researcher_add = @b1_jobs
 		}
 	}
 
@@ -62,10 +42,7 @@ building_research_lab_1 = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_droneBase_add = @h_base_jobs
-			job_brain_droneBaseEG_add = @res_base_jobs
-			job_brain_droneBaseRC_add = @res_base_jobs
-			job_brain_droneBaseVM_add = @res_base_jobs
+			job_brain_drone_add = @b1_jobs
 		}
 	}
 
@@ -75,10 +52,7 @@ building_research_lab_1 = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculatorbase_add = @h_base_jobs
-			job_calculatorbaseEG_add = @res_base_jobs
-			job_calculatorbaseRC_add = @res_base_jobs
-			job_calculatorbaseVM_add = @res_base_jobs
+			job_calculator_add = @b1_jobs
 		}
 	}
 
@@ -86,7 +60,6 @@ building_research_lab_1 = {
 		category = planet_buildings
 		cost = {
 			minerals = @b1_minerals
-			alloys = 250
 		}
 		upkeep = {
 			energy = @b1_upkeep
@@ -124,14 +97,27 @@ building_research_lab_1 = {
 		}
 		text = job_calculator_effect_desc
 	}
+
+	#country_modifier = {
+	#	if= {
+	#		limit = {
+	#			owner = { has_origin = origin_mario_minaccia }
+	#			}
+	#		planet_researchers_produces_mult = -0.00809
+	#	}
+	#	else = {
+	#		planet_researchers_produces_mult = -0.01618
+	#	}
+	#}
+	country_modifier = {
+			planet_researchers_produces_mult = -0.01618
+	}
 }
 
 building_research_lab_2 = {
 	base_buildtime = @b2_time
 	can_build = no
-	empire_limit = {
-	 	base = 2
-	}
+
 	category = research
 
 	allow = {
@@ -152,11 +138,7 @@ building_research_lab_2 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcherbase_add = @b_base_jobs2
-			job_researcherbaseS_add = @soc_base_jobs2
-			job_researcherbaseEG_add = @res_base_jobs2
-			job_researcherbaseRC_add = @res_base_jobs2
-			job_researcherbaseVM_add = @res_base_jobs2
+			job_researcher_add = @b2_jobs
 		}
 	}
 
@@ -166,10 +148,7 @@ building_research_lab_2 = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_droneBase_add = @b_base_jobs2
-			job_brain_droneBaseEG_add = @res_base_jobs2
-			job_brain_droneBaseRC_add = @res_base_jobs2
-			job_brain_droneBaseVM_add = @res_base_jobs2
+			job_brain_drone_add = @b2_jobs
 		}
 	}
 
@@ -179,10 +158,7 @@ building_research_lab_2 = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculatorbase_add = @b_base_jobs2
-			job_calculatorbaseEG_add = @res_base_jobs2
-			job_calculatorbaseRC_add = @res_base_jobs2
-			job_calculatorbaseVM_add = @res_base_jobs2
+			job_calculator_add = @b2_jobs
 		}
 	}
 
@@ -229,19 +205,19 @@ building_research_lab_2 = {
 		}
 		text = job_calculator_effect_desc
 	}
+	country_modifier = {
+		planet_researchers_produces_mult = -0.01618
+	}
 }
 
 building_research_lab_3 = {
 	base_buildtime = @b3_time
 	can_build = no
-	empire_limit = {
-	 	base = 3
-	}
+
 	category = research
 
 	allow = {
 		has_major_upgraded_capital = yes
-		
 	}
 
 	destroy_trigger = {
@@ -258,11 +234,7 @@ building_research_lab_3 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcherbase_add = @b_base_jobs3
-			job_researcherbaseS_add = @soc_base_jobs3
-			job_researcherbaseEG_add = @res_base_jobs3
-			job_researcherbaseRC_add = @res_base_jobs3
-			job_researcherbaseVM_add = @res_base_jobs3
+			job_researcher_add = @b3_jobs
 		}
 	}
 
@@ -272,10 +244,7 @@ building_research_lab_3 = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_droneBase_add = @h_base_jobs3
-			job_brain_droneBaseEG_add = @res_base_jobs3
-			job_brain_droneBaseRC_add = @res_base_jobs3
-			job_brain_droneBaseVM_add = @res_base_jobs3
+			job_brain_drone_add = @b3_jobs
 		}
 	}
 
@@ -285,10 +254,7 @@ building_research_lab_3 = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculatorbase_add = @h_base_jobs3
-			job_calculatorbaseEG_add = @res_base_jobs3
-			job_calculatorbaseRC_add = @res_base_jobs3
-			job_calculatorbaseVM_add = @res_base_jobs3
+			job_calculator_add = @b3_jobs
 		}
 	}
 
@@ -372,6 +338,9 @@ building_research_lab_3 = {
 			owner = { is_machine_empire = yes }
 		}
 		text = job_calculator_effect_desc
+	}
+	country_modifier = {
+		planet_researchers_produces_mult = -0.01618
 	}
 }
 
@@ -506,7 +475,7 @@ building_supercomputer = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_droneBase_add = 1
+			job_brain_drone_add = 1
 		}
 	}
 
@@ -516,7 +485,7 @@ building_supercomputer = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculatorbase_add = 1
+			job_calculator_add = 1
 		}
 	}
 
@@ -788,7 +757,7 @@ building_vultaum_reality_computer = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_droneBase_add = 1
+			job_brain_drone_add = 1
 		}
 	}
 
@@ -798,7 +767,7 @@ building_vultaum_reality_computer = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculatorbase_add = 1
+			job_calculator_add = 1
 		}
 	}
 
@@ -828,5 +797,147 @@ building_vultaum_reality_computer = {
 			owner = { is_machine_empire = yes }
 		}
 		text = job_calculator_effect_desc
+	}
+}
+building_research_lab_military = {
+	base_buildtime = @b3_time
+	empire_limit = {
+	 	base = 1
+	}
+	category = research
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcherM_add = @b2_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_droneM_add = @b2_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculatorM_add = @b2_jobs
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_building_research_lab_military"
+	}
+}
+building_research_lab_experimental = {
+	base_buildtime = @b3_time
+	empire_limit = {
+	 	base = 1
+	}
+	category = research
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcherE_add = @b2_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_droneE_add = @b2_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculatorE_add = @b2_jobs
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			sr_dark_matter = @b1_rare_cost
+			rare_crystals = @b3_rare_cost
+			volatile_motes = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_dark_matter = @b1_rare_upkeep
+			rare_crystals = @b3_rare_cost
+			volatile_motes = @b3_rare_cost
+		}
+	}
+
+	prerequisites = {
+		"tech_building_research_lab_experimental"
 	}
 }

@@ -1,0 +1,3 @@
+military = {
+	icon = "gfx/interface/icons/ethicsethic_militarist.dds"
+}
