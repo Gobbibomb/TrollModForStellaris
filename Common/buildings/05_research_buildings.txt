@@ -109,8 +109,13 @@ building_research_lab_1 = {
 	#		planet_researchers_produces_mult = -0.01618
 	#	}
 	#}
-	country_modifier = {
-			planet_researchers_produces_mult = -0.01618
+	triggered_planet_modifier = {
+		potential = {
+			disabled = no
+		}
+		country_modifier = {
+		planet_researchers_produces_mult = -0.01618
+		}
 	}
 }
 
@@ -939,5 +944,217 @@ building_research_lab_experimental = {
 
 	prerequisites = {
 		"tech_building_research_lab_experimental"
+	}
+}
+building_administrative_ai = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	category = research
+	empire_limit = {
+		base = 1
+    }
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+		exists = owner
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+			#rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			#rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		all_technology_research_speed = 0.08
+	}
+
+	prerequisites = {
+		"tech_administrative_ai"
+	}
+
+	ai_weight = {
+		factor = 20
+	}
+}
+building_sapient_ai = {
+	base_buildtime = @b2_time
+	category = research
+	empire_limit = {
+		base = 1
+    }
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+		exists = owner
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+			is_gestalt = yes
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		all_technology_research_speed = 0.16
+	}
+
+	
+	prerequisites = {
+		"tech_sapient_ai"
+	}
+
+	ai_weight = {
+		factor = 20
+	}
+}
+building_sapient_ai_gestalt = {
+	base_buildtime = @b2_time
+	category = research
+	empire_limit = {
+		base = 1
+    }
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+		exists = owner
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+			is_gestalt = no
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		all_technology_research_speed = 0.16
+	}
+
+	prerequisites = {
+		tech_positronic_implants
+	}
+
+	ai_weight = {
+		factor = 20
+	}
+}
+building_positronic_implants = {
+	base_buildtime = @b3_time
+	can_be_disabled = no
+	category = research
+	empire_limit = {
+		base = 1
+    }
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+		exists = owner
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			rare_crystals = @b4_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		all_technology_research_speed = 0.32
+	}
+	prerequisites = {
+		"tech_construction_templates"
+	}
+	owner = {
+		set_country_flag = positronic_implants_construct
+	}
+	ai_weight = {
+		factor = 20
 	}
 }

@@ -9,7 +9,7 @@ tech_amoeba_strike_craft_1 = {
 	area = society
 	cost = @tier2cost3
 	tier = 2
-	category = { biology , military }
+	category = { biology }
 	ai_update_type = military
 	weight = 0
 
@@ -31,7 +31,7 @@ tech_swarm_strike_craft_1 = {
 	cost = @tier5cost3
 	tier = 5
 	is_rare = yes
-	category = { biology , military }
+	category = { biology }
 	ai_update_type = military
 	weight = 0
 
@@ -53,7 +53,7 @@ tech_scourge_missile_1 = {
 	cost = @tier5cost3
 	tier = 5
 	is_rare = yes
-	category = { biology , military }
+	category = { biology }
 	ai_update_type = military
 	weight = 0
 
@@ -74,7 +74,7 @@ tech_space_whale_weapon_1 = {
 	area = society
 	cost = @tier1cost3
 	tier = 1
-	category = { biology , military }
+	category = { biology }
 	ai_update_type = military
 	weight = 0
 

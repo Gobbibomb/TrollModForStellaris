@@ -115,7 +115,7 @@ building_foundry_1 = {
 	}
 
 	prerequisites = {
-		tech_basic_industry
+		"tech_heavy_industry"
 	}
 
 	triggered_desc = {
@@ -592,10 +592,7 @@ building_factory_1 = {
 	potential = {
 		exists = owner
 		owner = {
-			OR = {
-				#country_uses_consumer_goods = yes
-				has_origin = origin_fear_of_the_dark
-			}
+				always = yes
 		}
 		NOR = {
 			has_modifier = resort_colony
@@ -682,7 +679,7 @@ building_factory_1 = {
 	}
 
 	prerequisites = {
-		tech_basic_industry
+		"tech_heavy_industry"
 	}
 
 	upgrades = {

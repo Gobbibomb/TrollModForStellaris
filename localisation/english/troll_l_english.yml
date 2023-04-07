@@ -90,7 +90,13 @@ trait_ritual_of_sex_EFFECT3:0 "La popolazione non pensa ad accopiarsi!!! \n pop 
 #Ships and components
 
 #Technologies
+tech_heavy_industry:1 "Industria pesante"
+tech_heavy_industry_desc:1 "Possiamo costruire degli stabilimenti giganteschi per proddure metalli e beni di consumo"
 
+tech_building_research_lab_military:1 "Laboratorio di ricerca militare"
+tech_building_research_lab_military_desc:1 "Sblocca potenti laboratori di ricerca militari"
+tech_building_research_lab_experimental:1 "Laboratori di ricerca sperimentali"
+tech_building_research_lab_experimental_desc:1 "Sblocca potentissimi Laboratori di ricerca sperimentali"
 #Factions modifiers
 
 # Jobs
@@ -122,3 +128,17 @@ trait_sterile:0 "Sterile"
 trait_sterile_desc:0 "§LThis species is incapable of natural reproduction.§!"
 building_cloning_facility:0 "Cloning Facility"
 building_cloning_facility_desc:0 "Vast automated facilites where clones are grown and reared."
+
+#building
+
+building_research_lab_military:0 "Laboratorio di ricerca militare"
+building_research_lab_military_desc:0 "I nostri qui scienzati si concentreranno su ricerche militari"
+building_research_lab_experimental:1 "Laboratori di ricerca sperimentali"
+building_research_lab_experimental_desc:1 "I nostri qui scienzati si concentreranno ricerche sperimentali"
+
+building_administrative_ai:0 "Amministrazione AI"
+building_administrative_ai_desc:0 "Un AI di amminstrazione che ci controlla i paper"
+building_sapient_ai:0 "Amministrazione e controllo AI sapiente"
+building_administrative_ai_desc:0 "Un AI sapiente di amminstrazione che ci controlla i paper e li corregge"
+building_positronic_implants:0 "Impianto positronico avanzato"
+building_positronic_implants_desc:0 "Un AI positronica generalizzata che ci creea i paper e li corregge rendendogli sempre migliori"

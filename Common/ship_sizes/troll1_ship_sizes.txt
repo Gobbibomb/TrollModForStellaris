@@ -33,7 +33,4 @@ research_station = {
 			energy = 1
 		}
 	}
-    country_modifier = {
-        all_technology_research_speed = 0.0005
-    }
 }

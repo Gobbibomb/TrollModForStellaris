@@ -345,8 +345,9 @@ researcherM = {
 			consumer_goods = 0.1
 		}
 	}
-	country _modifier = {
-		category_military_research_speed_mult = 0.025
+	country_modifier = {
+		category_propulsion_research_speed_mult = 0.025
+		category_particles_research_speed_mult = 0.025
 		category_military_theory_research_speed_mult = 0.025
 	}
 	weight = {
@@ -414,8 +415,8 @@ brain_droneM = {
 			alloys = 0.75
 		}
 	}
-	country _modifier = {
-		category_military_research_speed_mult = 0.025
+	country_modifier = {
+		category_particles_research_speed_mult = 0.025
 		category_military_theory_research_speed_mult = 0.025
 	}
 
@@ -470,8 +471,7 @@ calculatorM = {
 			alloys = 0.75
 		}
 	}
-	country _modifier = {
-		category_military_research_speed_mult = 0.025
+	country_modifier = {
 		category_military_theory_research_speed_mult = 0.025
 	}
 	weight = {
@@ -533,7 +533,6 @@ researcherE = {
 	country_modifier = {
 		category_field_manipulation_research_speed_mult = 0.025
 		category_archaeostudies_research_speed_mult = 0.025
-		category_particles_research_speed_mult = 0.025
 	}
 	weight = {
 		weight = @specialist_job_weight
@@ -605,7 +604,6 @@ brain_droneE = {
 	country_modifier = {
 		category_field_manipulation_research_speed_mult = 0.025
 		category_archaeostudies_research_speed_mult = 0.025
-		category_particles_research_speed_mult = 0.025
 	}
 
 	weight = {
@@ -664,7 +662,6 @@ calculatorE = {
 	country_modifier = {
 		category_field_manipulation_research_speed_mult = 0.025
 		category_archaeostudies_research_speed_mult = 0.025
-		category_particles_research_speed_mult = 0.025
 	}
 	weight = {
 		weight = @complex_drone_job_weight
