@@ -7,7 +7,6 @@ building_refinery = {
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		building_basic_income_check = yes
 		always = no
 	}
 
@@ -93,7 +92,6 @@ building_chemical_plant = {
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		building_basic_income_check = yes
 		always = no
 	}
 
@@ -178,7 +176,6 @@ building_crystal_plant = {
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		building_basic_income_check = yes
 		always = no
 	}
 
