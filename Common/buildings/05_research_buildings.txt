@@ -98,25 +98,21 @@ building_research_lab_1 = {
 		text = job_calculator_effect_desc
 	}
 
-	#country_modifier = {
-	#	if= {
-	#		limit = {
-	#			owner = { has_origin = origin_mario_minaccia }
-	#			}
-	#		planet_researchers_produces_mult = -0.00809
-	#	}
-	#	else = {
-	#		planet_researchers_produces_mult = -0.01618
-	#	}
-	#}
-	triggered_planet_modifier = {
-		potential = {
-			disabled = no
+	triggered_country_modifier = {
+	potential = {
+			exists = owner
+			owner = { has_origin = origin_mario_minaccia }
 		}
-		country_modifier = {
-		planet_researchers_produces_mult = -0.01618
-		}
+		planet_researchers_produces_mult = -0.00809
 	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_origin = origin_mario_minaccia } }
+		}
+		planet_researchers_produces_mult = -0.01618
+	}
+	
 }
 
 building_research_lab_2 = {
@@ -397,7 +393,7 @@ building_institute = {
 
 	planet_modifier = {
 		planet_researchers_produces_mult = 0.15
-		job_head_researcher_add = 1
+		job_head_researcher_add = 2
 	}
 
 	prerequisites = {
@@ -472,6 +468,7 @@ building_supercomputer = {
 
 	planet_modifier = {
 		planet_researchers_produces_mult = 0.15
+		
 	}
 
 	triggered_planet_modifier = {
@@ -539,6 +536,9 @@ building_supercomputer = {
 		physics_research = 3
 		society_research = 3
 		engineering_research = 3
+	}
+	country_modifier = {
+		num_tech_alternatives_add = 1
 	}
 }
 
@@ -872,6 +872,9 @@ building_research_lab_military = {
 	prerequisites = {
 		"tech_building_research_lab_military"
 	}
+	country_modifier = {
+		num_tech_alternatives_add = 1
+	}
 }
 building_research_lab_experimental = {
 	base_buildtime = @b3_time
@@ -944,6 +947,9 @@ building_research_lab_experimental = {
 
 	prerequisites = {
 		"tech_building_research_lab_experimental"
+	}
+	country_modifier = {
+		num_tech_alternatives_add = 1
 	}
 }
 building_administrative_ai = {

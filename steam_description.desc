@@ -39,10 +39,11 @@ This mod to offer a multiplayer different experience with focus production rare 
 [list]
 [*]Now is big unique building for research that if upgrade can build other
 [*]Ogni laboratorio di ricerca diminuisce la produttività di 1,68%
-[*]Aggiunto laboratorio militare che permette in cambio di alloy di fare un sacco di ricerca e avere bonus su certi settori militari
-[*]Aggiunto laboratorio sperimentale che permette in cambio di opportune risorse fare un moltissima ricerca e avere bonus su certi settori tecnologici
-[*]Aggiunto 3 edifici che aumentano la velocità di ricerca al posto di avere direttamente
-[/list]
+[*]Aggiunto laboratorio militare che permette in cambio di alloy di fare un sacco di ricerca e avere bonus su certi settori militari e ti aumenta le ricerche alternative di 1
+[*]Aggiunto laboratorio sperimentale che permette in cambio di opportune risorse fare un moltissima ricerca e avere bonus su certi settori tecnologici e ti aumenta le ricerche alternative di 1
+[*]Aggiunto 3 edifici che aumentano la velocità di ricerca al posto di avere direttamente il bonus dalla ricerca
+[*]Aggiunto modulo stazione che aumenta la ricerca dai ricercatori diquel sistema del 12,5%
+[*]I ricercatori invece di fare 12 ricerca fanno 15 ricerca.
 [policies]
 [list]
 [*]Ora il trade offre molte buone opportunità

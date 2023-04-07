@@ -21,9 +21,9 @@ researcher = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 4
-			engineering_research = 4
-			society_research = 4
+			physics_research = 5
+			engineering_research = 5
+			society_research = 5
 		}
 		upkeep = {
 			consumer_goods = 1.5
@@ -105,9 +105,9 @@ archaeoengineers = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 2
-			engineering_research = 2
-			society_research = 5
+			physics_research = 2.5
+			engineering_research = 2.5
+			society_research = 6
 		}
 		produces = {
 			trigger = { planet = { is_planet_class = pc_relic } }
@@ -193,9 +193,9 @@ brain_drone = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 4
-			engineering_research = 4
-			society_research = 4
+			physics_research = 5
+			engineering_research = 5
+			society_research = 5
 		}
 		upkeep = {
 			energy = 6
@@ -259,9 +259,9 @@ calculator = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 4
-			engineering_research = 4
-			society_research = 4
+			physics_research = 5
+			engineering_research = 5
+			society_research = 5
 		}
 		upkeep = {
 			energy = 5

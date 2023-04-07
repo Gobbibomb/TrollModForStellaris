@@ -70,8 +70,10 @@ trait_ritual_of_sex_EFFECT:0 "La popolazione si prepara ad accoppiarsi!!! \nPop 
 trait_ritual_of_sex_EFFECT2:0 "La popolazione si prepara ad accoppiarsi!! \nPlanet jobs produces §R-30%§!"
 trait_ritual_of_sex_EFFECT3:0 "La popolazione non pensa ad accopiarsi!!! \n pop jobs produces §G+5%§!"
 #  edict_capacity_subsidies_tooltip:0 "Increases the upkeep of £job_technician£ $job_technician_plural$ by £minerals£§Y0.5§!"
-
-#Civics
+#starbase
+sm_research_site:0 "Assistenza scientifica"
+sm_research_site_desc:1 "Una buona parte della stazione è utilizzata per provare, verificare e migliorare le ricerche scientifiche testando anche a 0G o a estreme temperature"
+#from#Civics
 #Federations
 #Federation Laws
 #Federation Perks
@@ -100,6 +102,35 @@ tech_building_research_lab_experimental_desc:1 "Sblocca potentissimi Laboratori 
 #Factions modifiers
 
 # Jobs
+job_researcherM:1 "Ricercatore militare"
+mod_job_researcherM_add:0 "$job_researcherM$ Jobs"
+job_researcherM_plural:1 "Ricercatori militari"
+job_researcherM_desc:1 "Questo ricercatore cerca le migliori tecnologie in campo militare testando con le leghe"
+
+job_brain_droneM:1 "Cervello di drone militare"
+job_brain_droneM_plural:1 "Cervelli di drone militare"
+job_brain_droneM_desc:1 "un distaccamento neurale allenato con interfacie militari"
+mod_job_brain_droneM_add:0 "$job_brain_droneM$ Jobs"
+
+job_calculatorM:1 "Calcolatore militare"
+job_calculatorM_plural:1 "Calcolatori militari"
+job_calculatorM_desc:1 "Questo calcolatore cerca di togliere più vetri possibili dalle astronavi per il campo militare"
+mod_job_calculatorM_add:0 "$job_calculatorM$ Jobs"
+
+job_researcherE:1 "Ricercatore sperimentale"
+job_researcherE_plural:1 "Ricercatori sperimentali"
+job_researcherE_desc:1 "Ricercatore sperimentale che cerca di testare e trovare delle tecnologie incredibili"
+mod_job_researcherE_add:0 "$job_researcherE$ Jobs"
+
+job_brain_droneE:1 "Cervello di drone sperimentale"
+job_brain_droneE_plural:1 "Cervelli di drone sperimentale"
+job_brain_droneE_desc:1 "Cervello di drone che cerca di testare e trovare delle tecnologie alveari incredibili"
+mod_job_brain_droneE_add:0 "$job_brain_droneE$ Jobs"
+
+job_calculatorE:1 "Calcolatore sperimentale"
+job_calculatorE_plural:1 "Calcolatoie sperimentale"
+job_calculatorE_desc:1 "Un elaboratore che cerca di testare e trovare delle tecnologie superiori della controparte umanoide inferiore"
+mod_job_calculatorE_add:0 "$job_calculatorE$ Jobs"
 #Armies
 #Galactic Council Resolutions
 
