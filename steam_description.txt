@@ -17,6 +17,7 @@ This mod to offer a multiplayer different experience with focus production rare 
 [*]Rare resource can't product with building refining with minerals 
 [*]More Rare resource on systems but cost energy use.
 [*]Special system with much resource but cost antimatter use
+[*]Nave colonia costa 100 influenza ma se hai politica espansionistica hai i 75% di sconto
 [/list]
 [h2]Goverment trait and edicts[/h2]
 [list]
@@ -34,4 +35,9 @@ This mod to offer a multiplayer different experience with focus production rare 
 [list]
 [*]point defense not flak is little best with range.
 [*]Upgrade tech hull now give 25% hull (before 10%)
+[/list]
+[h2]Tradition [/h2]
+[list]
+[*]Addottare Espansione ora ti riduce costo nave colonia
+[*]Finire Espansione ora ti cancella il costo influenza della nave colonia
 [/list]

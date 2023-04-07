@@ -155,13 +155,24 @@ colonizer = {
 			alloys = 200
 			minerals = 500
 		}
+		
 		cost = {
 			trigger = {
 				from = {
+					NOT = { has_tradition = tr_expansion_finish }
 					NOT = { has_policy_flag = diplo_stance_expansionist }
 				}
 			}
 			influence = 100
+		}
+		cost = {
+			trigger = {
+				from = {
+					NOT = { has_tradition = tr_expansion_finish }
+					has_policy_flag = diplo_stance_expansionist
+				}
+			}
+			influence = 25
 		}
 		
 
@@ -230,6 +241,22 @@ sponsored_colonizer = {
 			alloys = @colony_upkeep_alloys
 		}
 	}
+	cost = {
+		trigger = {
+			from = {
+				NOT = { has_policy_flag = diplo_stance_expansionist }
+			}
+		}
+		influence = 50
+	}
+	cost = {
+		trigger = {
+			from = {
+				has_policy_flag = diplo_stance_expansionist
+			}
+		}
+		influence = 12.5
+	}
 
 	potential_country = {
 		OR = {
@@ -296,6 +323,14 @@ lithoid_colonizer = {
 				}
 			}
 			influence = 100
+		}
+		cost = {
+			trigger = {
+				from = {
+					has_policy_flag = diplo_stance_expansionist
+				}
+			}
+			influence = 25
 		}
 		upkeep = {
 
