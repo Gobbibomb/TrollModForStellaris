@@ -1,0 +1,4 @@
+Centro di ricerca sperimentale: scienzati che fanno il doppio di fisica utilizza energia spazi 6
+Centro di ricerca Militare : scienzati che fa il doppio di ingegneria utilizza alloy e fa il doppio di ingegneria spazi 6.
+Impianto di ricerca che ti da bonus ricerca al posto della tech per bonus ricerca.
+Impianto di ricerca che ti da alternative research

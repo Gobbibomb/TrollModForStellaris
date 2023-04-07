@@ -1,0 +1,52 @@
+#potenziatori ricerca
+
+research_site = {
+	icon = "GFX_starbase_research_site"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_exotic_gases
+		}
+		is_orbital_ring = no
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet"
+			solar_system = {
+				any_system_colony = {
+					is_owned_by = from
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 100
+			exotic_gases = 25
+		}
+
+		upkeep = {
+			energy = 2
+			exotic_gases = 1
+		}
+	}
+
+	system_modifier = {
+		planet_researchers_produces_mult = 0.125
+	}
+
+	show_in_tech = "tech_exotic_gases"
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}

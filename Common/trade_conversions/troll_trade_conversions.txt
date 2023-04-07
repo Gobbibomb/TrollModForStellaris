@@ -28,10 +28,29 @@ trade_league_conversion =
 	}
 
 	conversion_rate = {
-		energy = 0.25
+		energy = 0.2
 		consumer_goods = 0.20
 		unity = 0.25
 		alloys = 0.015
+	}
+
+	economic_category = trade_routes
+}
+trade_conversion_science =
+{
+	potential = {
+		has_policy_flag = trade_conversion_trade_league
+	}
+
+	weight = {
+		weight = 100
+	}
+
+	conversion_rate = {
+		energy = 0.25
+		physics_research = 0.05
+		engineering_research = 0.05
+		society_research = 0.1
 	}
 
 	economic_category = trade_routes
