@@ -5,3 +5,8 @@ trade_policy_alloy:1 "commercio di armi e armamenti"
 trade_policy_alloy_desc:1 "dai la possibilità come negli usa di commerciare con l'alloy e rendi legale il possesso, e l'utilizzo..\n\n§R-5§! £stability£ §R-5%§! §Gpop growth speed§! (perchè muore)\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.5§! and £alloys£ §Y0.1§!§!"
 trade_policy_science:1 "Brevetti per commerciare brevettando"
 trade_policy_science_desc:1 "Usa il potere del commercio per fare scienza, ha senso? no. ma farai faville \n\n£trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§!, £physics_research£ §B0.05§!§! , £engineering_research£ §G0.05§!§! and £society_research£ §G0.05§!§!"
+
+tradition_expansion_desc:2 "Addottandone tutte, la nave colonia non ha costo INFLUENZA"#§Binfluenza§!
+#tr_expansion_finish_effect:2 "La nave colonia non ha costo $influenza$"
+#tr_expansion_finish_desc
+ #trade_policy_alloy_desc:0 "Profits and taxes must take second place to improving alloy and militar equipement. We should focus our trade efforts towards the #manufacture and distribution military ship for civil.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.5§! and £alloys£ §Y0.1§!§!"
