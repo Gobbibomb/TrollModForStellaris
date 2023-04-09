@@ -1,1 +1,8 @@
-trait_venerable + 100% trade value? inizialmente era +12 guardare esempio trait_thrifty or trait_nuumismatic_administration
+trait_venerable + 100% trade value? inizialmente era +12 guardare esempio trait_thrifty +3or trait_nuumismatic_administration
+leader_trait_engineer fanne due separati, uno di hull e uno di armor e aumenta upkeep
+Ogni stazione di ricerca aumenta di 0,05% la ricerca alle tecnologie.
+Ogni laboratorio di ricerca diminuisce la produttività di 1,68%
+Aggiunto laboratorio militare che permette in cambio di alloy di fare un sacco di ricerca e avere bonus su certi settori militari
+Aggiunto laboratorio sperimentale che permette in cambio di opportune risorse fare un moltissima ricerca e avere bonus su certi settori tecnologici
+Industrie consumer goods e alloy non sono subito sbloccate ma serve heavy_industry tecnology
+Inserite costruzioni che aumentano la tech quando trovi tech_administrative_ai,tech_sapient_ai,tech_positronic_implants invece che direttamente dalla ricerca.

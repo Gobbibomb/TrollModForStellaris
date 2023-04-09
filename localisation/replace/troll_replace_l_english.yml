@@ -1,7 +1,10 @@
 ﻿l_english:
- trade_policy_trade_league_desc:1 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§!, £unity£ §E0.25§!, £consumer_goods£ §L0.2§!, £society_research£ §G0.25§! and £alloys£ §B0.01§! "
-trade_policy_alloys_desc:1 "Prmettere il commercio di armi e tassarle è il miglio modo per aumentare i nostri equipaggiamenti militari £energy£ §Y0.5§! and £alloys£ §B0.1§!"
-trade_policy_trade_league_2_desc:1 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§!, £unity£ §E0.25§!, £consumer_goods£ §L0.2§! and £alloys£ §B0.015§! "
+ trade_policy_trade_league_desc:1 "Una lega commerciale che gusto, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.2§!, £unity£ §E0.25§!, £consumer_goods£ §L0.2§!, £society_research£ §G0.25§! and £alloys£ §B0.01§! "
+trade_policy_trade_league_2_desc:1 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.2§!, £unity£ §E0.25§!, £consumer_goods£ §L0.2§! and £alloys£ §B0.015§! "
+trade_policy_alloy:1 "commercio di armi e armamenti"
+trade_policy_alloy_desc:1 "dai la possibilità come negli usa di commerciare con l'alloy e rendi legale il possesso, e l'utilizzo..\n\n§R-5§! £stability£ §R-5%§! §Gpop growth speed§! (perchè muore)\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.5§! and £alloys£ §Y0.1§!§!"
+trade_policy_science:1 "Brevetti per commerciare brevettando"
+trade_policy_science_desc:1 "Usa il potere del commercio per fare scienza, ha senso? no. ma farai faville \n\n£trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§!, £physics_research£ §B0.05§!§! , £engineering_research£ §G0.05§!§! and £society_research£ §G0.05§!§!"
 
 tradition_expansion_desc:2 "Addottandone tutte, la nave colonia non ha costo INFLUENZA"#§Binfluenza§!
 #tr_expansion_finish_effect:2 "La nave colonia non ha costo $influenza$"

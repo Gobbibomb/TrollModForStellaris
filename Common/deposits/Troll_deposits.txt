@@ -16,7 +16,7 @@
 
 d_troll_1 = {
 	station = shipclass_mining_station 
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	
 	resources = { 
 		category = orbital_mining_deposits
@@ -43,7 +43,7 @@ d_troll_1 = {
 }
 d_troll_2 = {
 	station = shipclass_mining_station 
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	
 	resources = { 
 		category = orbital_mining_deposits
@@ -65,7 +65,7 @@ d_troll_2 = {
 }
 d_troll_3 = {
 	station = shipclass_mining_station 
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	
 	resources = { 
 		category = orbital_mining_deposits

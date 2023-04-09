@@ -13,4 +13,8 @@ spriteTypes = {
 		name = "GFX_ship_part_point_defense_3R"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_point_defense_3.dds"
 	}
+	spriteType = {
+		name = "GFX_starbase_research_site"
+		texturefile = "gfx/interface/icons/modules/sb_research_site.dds"
+	}
 }
