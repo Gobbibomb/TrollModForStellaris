@@ -41,7 +41,7 @@ district_crashed_slaver_ship = {
 
 	planet_modifier = {
 		planet_housing_add = 4
-		planet_max_buildings_add = 0.75
+		planet_max_buildings_add = 0.25
 	}
 
 	triggered_planet_modifier = {
@@ -147,6 +147,7 @@ district_crashed_slaver_ship = {
 district_city = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
 
 	show_on_uncolonized = {
 		exists = from
@@ -160,8 +161,22 @@ district_city = {
 	}
 
 	potential = {
-		exists = owner
-		owner = { is_regular_empire = yes }
+		OR = {
+			NOT = { exists = owner } #this condition is needed for galaxy generation
+			AND = {
+				exists = owner
+				owner = {
+					OR = {
+						is_regular_empire = yes
+						AND = {
+							is_country_type = primitive
+							is_hive_empire = no
+						}
+					}
+				}
+			}
+		}
+		NOT = { has_deposit = d_crashed_slaver_ship }
 		OR = {
 			uses_district_set = standard
 			uses_district_set = hive_world
@@ -196,7 +211,7 @@ district_city = {
 
 	planet_modifier = {
 		planet_housing_add = 5
-		planet_max_buildings_add = 1
+		planet_max_buildings_add = 0.34
 	}
 
 	triggered_planet_modifier = {
@@ -215,7 +230,10 @@ district_city = {
 		potential = {
 			exists = owner
 			owner = {
-				is_regular_empire = yes
+				OR = {
+					is_regular_empire = yes
+					has_origin = origin_fear_of_the_dark
+				}
 			}
 		}
 		modifier = {
@@ -261,7 +279,7 @@ district_city = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
+			owner = { has_active_tradition = tr_mercantile_trickle_up_economics }
 		}
 		modifier = {
 			job_clerk_add = 1
@@ -275,18 +293,12 @@ district_city = {
 		}
 		text = job_clerk_effect_desc
 	}
-
-	ai_resource_production = {
-		energy = 1
-		trigger = {
-			always = yes
-		}
-	}
 }
 
 district_hive = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
 
 	show_on_uncolonized = {
 		from = { is_hive_empire = yes }
@@ -335,7 +347,7 @@ district_hive = {
 	planet_modifier = {
 		planet_housing_add = 6
 		job_maintenance_drone_add = 3
-		planet_max_buildings_add = 1
+		planet_max_buildings_add = 0.34
 	}
 
 	triggered_planet_modifier = {
@@ -383,6 +395,7 @@ district_hive = {
 district_nexus = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
 
 	show_on_uncolonized = {
 		from = { is_machine_empire = yes }
@@ -431,7 +444,7 @@ district_nexus = {
 	planet_modifier = {
 		planet_housing_add = 5
 		job_maintenance_drone_add = 3
-		planet_max_buildings_add = 1
+		planet_max_buildings_add = 0.34
 	}
 
 	triggered_planet_modifier = {
@@ -518,6 +531,7 @@ district_industrial = {
 
 	planet_modifier = {
 		planet_housing_add = 2
+		planet_max_buildings_add = 0.16
 	}
 
 	triggered_planet_modifier = {
@@ -526,7 +540,7 @@ district_industrial = {
 			owner = { is_crafter_empire = yes }
 		}
 		modifier = {
-			planet_max_buildings_add = 0.34
+			planet_max_buildings_add = 0.18
 		}
 	}
 
@@ -534,7 +548,10 @@ district_industrial = {
 		potential = {
 			exists = owner
 			owner = {
-				is_regular_empire = yes
+				OR = {
+					is_regular_empire = yes
+					has_origin = origin_fear_of_the_dark
+				}
 				is_crafter_empire = no
 			}
 		}
@@ -557,7 +574,10 @@ district_industrial = {
 		potential = {
 			exists = owner
 			owner = {
-				is_regular_empire = yes
+				OR = {
+					is_regular_empire = yes
+					has_origin = origin_fear_of_the_dark
+				}
 				is_catalytic_empire = no
 			}
 		}
@@ -776,6 +796,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_crafter_empire = no
 			}
+			NOT = { has_designation = col_foundry }
 		}
 		text = job_artisan_effect_desc
 	}
@@ -787,6 +808,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_crafter_empire = yes
 			}
+			NOT = { has_designation = col_foundry }
 		}
 		text = job_artificer_effect_desc
 	}
@@ -809,6 +831,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_catalytic_empire = no
 			}
+			NOT = { has_designation = col_factory }
 		}
 		text = job_foundry_effect_desc
 	}
@@ -820,6 +843,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_catalytic_empire = yes
 			}
+			NOT = { has_designation = col_factory }
 		}
 		text = job_catalytic_technician_effect_desc
 	}
@@ -879,21 +903,6 @@ district_industrial = {
 		}
 		text = job_maintenance_drone_effect_desc
 	}
-
-	ai_resource_production = {
-		alloys = 1
-		trigger = {
-			always = yes
-		}
-	}
-	ai_resource_production = {
-		consumer_goods = 1
-		trigger = {
-			owner = {
-				country_uses_consumer_goods = yes
-			}
-		}
-	}
 }
 
 district_srw_commercial = {
@@ -939,6 +948,7 @@ district_srw_commercial = {
 
 	planet_modifier = {
 		planet_housing_add = 2
+		
 	}
 
 	triggered_planet_modifier = {
@@ -1030,12 +1040,5 @@ district_srw_commercial = {
 			}
 		}
 		text = job_artificer_effect_desc
-	}
-
-	ai_resource_production = {
-		energy = 1
-		trigger = {
-			always = yes
-		}
 	}
 }

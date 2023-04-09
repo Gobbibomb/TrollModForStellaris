@@ -6,3 +6,9 @@ Aggiunto laboratorio militare che permette in cambio di alloy di fare un sacco d
 Aggiunto laboratorio sperimentale che permette in cambio di opportune risorse fare un moltissima ricerca e avere bonus su certi settori tecnologici
 Industrie consumer goods e alloy non sono subito sbloccate ma serve heavy_industry tecnology
 Inserite costruzioni che aumentano la tech quando trovi tech_administrative_ai,tech_sapient_ai,tech_positronic_implants invece che direttamente dalla ricerca.
+
+# Revision District
+distretti cittadini danno 0.34 invece di 1
+crashes slaver ship danno 0.25 invece di 0.75
+Distretti industriali danno 0.16 //testare che is_crafter_empire dia 0.34
+Tutti i distretti rurali danno 0.16
