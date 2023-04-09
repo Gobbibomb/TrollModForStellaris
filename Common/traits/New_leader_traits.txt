@@ -1,7 +1,6 @@
 #country_x_tech_research_speed	engineering, physics, society
 leader_trait_ruler_engineer = {
 	cost = 1
-	modification = no
 	icon = "gfx/interface/icons/traits/trait_erudite.dds"
 	modifier = {
 		country_engineering_tech_research_speed = 0.15
@@ -14,7 +13,6 @@ leader_trait_ruler_engineer = {
 }
 leader_trait_ruler_physics = {
 	cost = 1
-	modification = no
 	icon = "gfx/interface/icons/traits/trait_erudite.dds"
 	modifier = {
 		country_physics_tech_research_speed = 0.15
@@ -27,7 +25,6 @@ leader_trait_ruler_physics = {
 }
 leader_trait_ruler_society = {
 	cost = 1
-	modification = no
 	icon = "gfx/interface/icons/traits/trait_erudite.dds"
 	modifier = {
 		country_society_tech_research_speed = 0.15
@@ -39,7 +36,6 @@ leader_trait_ruler_society = {
 }
 leader_trait_ruler_Destroy_cities = {
 	cost = 0
-	modification = no
 	icon = "gfx/interface/icons/traits/trait_erudite.dds"
 	modifier = {
 		ship_orbital_bombardment_mult = 0.20
@@ -49,7 +45,6 @@ leader_trait_ruler_Destroy_cities = {
 }
 leader_trait_ruler_Defender = {
 	cost = 0
-	modification = no
 	icon = "gfx/interface/icons/traits/trait_erudite.dds"
 	modifier = {
 		ship_home_territory_fire_rate_mult = 0.15
@@ -62,7 +57,6 @@ leader_trait_ruler_Defender = {
 }
 leader_trait_governor_society = {
 	cost = 1
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
 	modifier = {
 		planet_jobs_society_research_produces_mult = 0.25
@@ -75,7 +69,6 @@ leader_trait_governor_society = {
 }
 leader_trait_governor_engineering = {
 	cost = 1
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
 	modifier = {
 		planet_jobs_engineering_research_produces_mult = 0.2
@@ -88,7 +81,6 @@ leader_trait_governor_engineering = {
 }
 leader_trait_governor_physics = {
 	cost = 1
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
 	modifier = {
 		planet_jobs_physics_research_produces_mult = 0.20
@@ -103,7 +95,6 @@ leader_trait_governor_physics = {
 
 leader_trait_big_weapon = {
 	cost = 1
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_army_logistician.dds"
 	modifier = {
 		armies_upkeep_mult = 0.2

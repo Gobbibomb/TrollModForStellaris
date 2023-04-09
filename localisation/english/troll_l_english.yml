@@ -173,3 +173,9 @@ building_sapient_ai:0 "Amministrazione e controllo AI sapiente"
 building_administrative_ai_desc:0 "Un AI sapiente di amminstrazione che ci controlla i paper e li corregge"
 building_positronic_implants:0 "Impianto positronico avanzato"
 building_positronic_implants_desc:0 "Un AI positronica generalizzata che ci creea i paper e li corregge rendendogli sempre migliori"
+trade_policy_alloy:1 "commercio di armi e armamenti"
+trade_policy_alloy_desc:1 "dai la possibilità come negli usa di commerciare con l'alloy e rendi legale il possesso, e l'utilizzo..\n\n§R-5§! £stability£ §R-5%§! §Gpop growth speed§! (perchè muore)\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.5§! and £alloys£ §Y0.1§!§!"
+#planet
+
+pc_infested_troll:0 "Pianeta infestato ma molto produttivo"
+pc_infested_troll_desc:0 "Questo pianeta è infestato e ci sono un sacco di vantaggi a utilizzarlo, peccatto che bisogna usare una risorsa per tenere a bada l'infestazine"

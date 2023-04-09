@@ -26,7 +26,7 @@ civic_big_architecture = {
 		ship_armor_mult = 1
 		ship_shield_mult = -0.1
 		ships_upkeep_mult  = 0.5
-		ship_upkeep_mult  = 0.5
+		#ship_upkeep_mult  = 0.5
 		ship_speed_mult = -0.5
 		country_naval_cap_mult = -0.51
 		ship_evasion_mult = -0.2
@@ -101,8 +101,8 @@ civic_hive_station_focus_network = {
 	modifier = {
 		station_gatherers_produces_mult = 0.5
 		station_researchers_produces_mult = 0.15
-		station_gatherers_upkeeps_mult = 0.2 #todo not work
-		station_researchers_upkeeps_mult = 0.1 #to do not work
+		station_gatherers_upkeep_mult = 0.2
+		station_researchers_upkeep_mult = 0.1
 	}
 }
 

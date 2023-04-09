@@ -235,28 +235,29 @@ sponsored_colonizer = {
 		cost = {
 			energy = 500
 		}
+		cost = {
+			trigger = {
+				from = {
+					NOT = { has_policy_flag = diplo_stance_expansionist }
+				}
+			}
+			influence = 50
+		}
+		cost = {
+			trigger = {
+				from = {
+					has_policy_flag = diplo_stance_expansionist
+				}
+			}
+			influence = 12.5
+		}
 
 		upkeep = {
 			energy = @colony_upkeep_energy
 			alloys = @colony_upkeep_alloys
 		}
 	}
-	cost = {
-		trigger = {
-			from = {
-				NOT = { has_policy_flag = diplo_stance_expansionist }
-			}
-		}
-		influence = 50
-	}
-	cost = {
-		trigger = {
-			from = {
-				has_policy_flag = diplo_stance_expansionist
-			}
-		}
-		influence = 12.5
-	}
+	
 
 	potential_country = {
 		OR = {
