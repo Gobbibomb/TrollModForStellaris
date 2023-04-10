@@ -1,7 +1,8 @@
-@base_cost = 250
-@city_cost = 450
+@base_cost = 200
+@city_cost = 300
 @cc_city_cost = 50
-@e_city_cost = 100
+@al_city_cost = 25
+@e_city_cost = 50
 
 district_crashed_slaver_ship = {
 	is_capped_by_modifier = yes
@@ -40,8 +41,8 @@ district_crashed_slaver_ship = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 4
-		planet_max_buildings_add = 0.25
+		planet_housing_add = 5
+		planet_max_buildings_add = 0.5
 	}
 
 	triggered_planet_modifier = {
@@ -208,10 +209,9 @@ district_city = {
 			energy = 2
 		}
 	}
-
 	planet_modifier = {
-		planet_housing_add = 5
-		planet_max_buildings_add = 0.34
+		planet_housing_add = 6
+		planet_max_buildings_add = 0.5
 	}
 
 	triggered_planet_modifier = {
@@ -337,7 +337,6 @@ district_hive = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost
-			energy = @cc_city_cost
 		}
 		upkeep = {
 			energy = 2
@@ -345,9 +344,9 @@ district_hive = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 6
+		planet_housing_add = 7
 		job_maintenance_drone_add = 3
-		planet_max_buildings_add = 0.34
+		planet_max_buildings_add = 0.5
 	}
 
 	triggered_planet_modifier = {
@@ -442,9 +441,9 @@ district_nexus = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 5
+		planet_housing_add = 6
 		job_maintenance_drone_add = 3
-		planet_max_buildings_add = 0.34
+		planet_max_buildings_add = 0.5
 	}
 
 	triggered_planet_modifier = {
@@ -512,7 +511,7 @@ district_industrial = {
 		category = planet_districts_industrial
 		cost = {
 			minerals = @city_cost
-			alloys = @cc_city_cost
+			alloys = @al_city_cost
 		}
 		upkeep = {
 			energy = 2
@@ -531,7 +530,7 @@ district_industrial = {
 
 	planet_modifier = {
 		planet_housing_add = 2
-		planet_max_buildings_add = 0.16
+		planet_max_buildings_add = 0.26
 	}
 
 	triggered_planet_modifier = {
@@ -540,7 +539,7 @@ district_industrial = {
 			owner = { is_crafter_empire = yes }
 		}
 		modifier = {
-			planet_max_buildings_add = 0.18
+			planet_max_buildings_add = 0.5
 		}
 	}
 

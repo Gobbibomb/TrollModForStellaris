@@ -38,7 +38,7 @@ district_generator = {
 
 	planet_modifier = {
 		planet_housing_add = 2
-		planet_max_buildings_add = 0.16
+		planet_max_buildings_add = 0.25
 	}
 
 	triggered_planet_modifier = {
@@ -154,7 +154,14 @@ district_mining = {
 	allow = {
 		NOT = { has_modifier = resort_colony }
 	}
-
+	if = {
+		limit = { exists = owner }
+		owner = {
+			country_modifier = {
+			country_resource_max_add = 100
+			}
+		}
+	}
 	conversion_ratio = 1
 	convert_to = {
 		district_mining_uncapped
@@ -172,7 +179,7 @@ district_mining = {
 
 	planet_modifier = {
 		planet_housing_add = 2
-		planet_max_buildings_add = 0.16
+		planet_max_buildings_add = 0.25
 	}
 
 	triggered_planet_modifier = {
@@ -326,7 +333,7 @@ district_farming = {
 
 	planet_modifier = {
 		planet_housing_add = 2
-		planet_max_buildings_add = 0.16
+		planet_max_buildings_add = 0.25
 	}
 
 	triggered_planet_modifier = {
@@ -535,7 +542,7 @@ district_generator_uncapped = {
 
 	planet_modifier = {
 		planet_housing_add = 2
-		planet_max_buildings_add = 0.16
+		planet_max_buildings_add = 0.25
 	}
 
 	triggered_planet_modifier = {
@@ -675,7 +682,7 @@ district_mining_uncapped = {
 	convert_to = {
 		district_mining
 	}
-
+	
 	resources = {
 		category = planet_districts
 		cost = {
@@ -688,7 +695,7 @@ district_mining_uncapped = {
 
 	planet_modifier = {
 		planet_housing_add = 2
-		planet_max_buildings_add = 0.16
+		planet_max_buildings_add = 0.25
 	}
 
 	triggered_planet_modifier = {
@@ -803,7 +810,7 @@ district_mining_uncapped = {
 			owner = { has_origin = origin_subterranean }
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 0.5
 		}
 	}
 
@@ -813,7 +820,7 @@ district_mining_uncapped = {
 			owner = { has_origin = origin_subterranean }
 		}
 		modifier = {
-			planet_max_buildings_add = 0.34
+			planet_max_buildings_add = 0.5
 		}
 	}
 
@@ -930,7 +937,7 @@ district_farming_uncapped = {
 
 	planet_modifier = {
 		planet_housing_add = 2
-		planet_max_buildings_add = 0.16
+		planet_max_buildings_add = 0.25
 	}
 
 	triggered_planet_modifier = {

@@ -8,7 +8,9 @@ Industrie consumer goods e alloy non sono subito sbloccate ma serve heavy_indust
 Inserite costruzioni che aumentano la tech quando trovi tech_administrative_ai,tech_sapient_ai,tech_positronic_implants invece che direttamente dalla ricerca.
 
 # Revision District
-distretti cittadini danno 0.34 invece di 1
-crashes slaver ship danno 0.25 invece di 0.75
-Distretti industriali danno 0.16 //testare che is_crafter_empire dia 0.34
-Tutti i distretti rurali danno 0.16
+distretti cittadini danno 0.5 invece di 1 e danno 1 abitazione in più
+crashes slaver ship danno 0.5 invece di 0.75
+Distretti industriali danno 0.25 //testare che is_crafter_empire dia 0.5
+Tutti i distretti rurali danno 0.25
+Il costo dei distretti cittadini è cambiato da 500 a Mineral 300 e consumer goods 50
+Il costo dei distretti industriali è dambiato da 500 a minerals 300 alloys 25
